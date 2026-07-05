@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="t d">
+<title id="t">Abstract teal orbital interface</title><desc id="d">Layered teal curves, rings, and circuit points inspired by scientific visualization.</desc>
+<defs>
+<radialGradient id="g" cx="62%" cy="42%" r="58%"><stop offset="0" stop-color="#1ef5d2" stop-opacity=".38"/><stop offset=".42" stop-color="#0aa6a3" stop-opacity=".14"/><stop offset="1" stop-color="#020609" stop-opacity="0"/></radialGradient>
+<linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7fffe7"/><stop offset="1" stop-color="#01736f" stop-opacity=".1"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="2.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="900" height="620" fill="#03070b"/>
+<rect x="1" y="1" width="898" height="618" fill="url(#g)"/>
+<g opacity=".18" stroke="#54e7d4" stroke-width="1">
+<path d="M0 0V620"/><path d="M40 0V620"/><path d="M80 0V620"/><path d="M120 0V620"/><path d="M160 0V620"/><path d="M200 0V620"/><path d="M240 0V620"/><path d="M280 0V620"/><path d="M320 0V620"/><path d="M360 0V620"/><path d="M400 0V620"/><path d="M440 0V620"/><path d="M480 0V620"/><path d="M520 0V620"/><path d="M560 0V620"/><path d="M600 0V620"/><path d="M640 0V620"/><path d="M680 0V620"/><path d="M720 0V620"/><path d="M760 0V620"/><path d="M800 0V620"/><path d="M840 0V620"/><path d="M880 0V620"/><path d="M0 0H900"/><path d="M0 40H900"/><path d="M0 80H900"/><path d="M0 120H900"/><path d="M0 160H900"/><path d="M0 200H900"/><path d="M0 240H900"/><path d="M0 280H900"/><path d="M0 320H900"/><path d="M0 360H900"/><path d="M0 400H900"/><path d="M0 440H900"/><path d="M0 480H900"/><path d="M0 520H900"/><path d="M0 560H900"/><path d="M0 600H900"/></g><g fill="none" stroke="url(#line)" filter="url(#glow)"><ellipse cx="565" cy="310" rx="280" ry="178" transform="rotate(-20 565 310)" stroke-width="1.2" opacity="0.75"/><ellipse cx="565" cy="310" rx="350" ry="236" transform="rotate(-20 565 310)" stroke-width="1.45" opacity="0.36"/><ellipse cx="565" cy="310" rx="430" ry="288" transform="rotate(-20 565 310)" stroke-width="1.7" opacity="0.23"/><ellipse cx="625" cy="310" rx="180" ry="108" transform="rotate(18 625 310)" stroke-width="1.95" opacity="0.46"/><ellipse cx="470" cy="315" rx="285" ry="52" transform="rotate(2 470 315)" stroke-width="2.2" opacity="0.55"/><ellipse cx="515" cy="350" rx="480" ry="78" transform="rotate(8 515 350)" stroke-width="2.45" opacity="0.33"/></g>
+<path d="M132 440C235 390 280 205 432 188c137-15 184 146 292 90" fill="none" stroke="#73ffe9" stroke-width="2" opacity=".55" filter="url(#glow)"/>
+<path d="M98 192c91 16 147-26 220-76 112-77 229-59 350 14" fill="none" stroke="#0cc7b1" stroke-width="1.2" opacity=".5"/>
+<g fill="#9dfff1" filter="url(#glow)">
+<circle cx="228" cy="218" r="3"/><circle cx="480" cy="184" r="2.4"/><circle cx="646" cy="330" r="2.8"/><circle cx="706" cy="250" r="2"/><circle cx="326" cy="430" r="2.2"/>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#ccfff7" opacity=".72" font-size="13">
+<text x="56" y="78">signal // model // circuit // code</text>
+<text x="704" y="548">MKR.ECE.SYSTEMS</text>
+</g></svg>
