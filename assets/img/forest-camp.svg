@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="forest-sky" x1="690" y1="0" x2="600" y2="462" gradientUnits="userSpaceOnUse"><stop stop-color="#EAEDE3"/><stop offset=".58" stop-color="#D0DBC9"/><stop offset="1" stop-color="#93A89B"/></linearGradient>
+    <linearGradient id="forest-water" x1="587" y1="371" x2="674" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#A5B9AC"/><stop offset=".5" stop-color="#7B9B97"/><stop offset="1" stop-color="#526F79"/></linearGradient>
+    <linearGradient id="forest-wood" x1="573" y1="371" x2="700" y2="708" gradientUnits="userSpaceOnUse"><stop stop-color="#DDD1AF"/><stop offset="1" stop-color="#BAA77E"/></linearGradient>
+    <linearGradient id="tent-cloth" x1="699" y1="299" x2="831" y2="464" gradientUnits="userSpaceOnUse"><stop stop-color="#CE9070"/><stop offset="1" stop-color="#AF694E"/></linearGradient>
+    <radialGradient id="lantern-pool" cx="0" cy="0" r="1" gradientTransform="translate(306 450) rotate(19) scale(220 113)" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE6A1" stop-opacity=".77"/><stop offset="1" stop-color="#FFE6A1" stop-opacity="0"/></radialGradient>
+    <radialGradient id="lantern-halo"><stop stop-color="#FFEAC0" stop-opacity=".74"/><stop offset="1" stop-color="#FFEAC0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="lantern-glass" x1="282" y1="407" x2="320" y2="468" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF6D5"/><stop offset=".56" stop-color="#F7DA94"/><stop offset="1" stop-color="#E0B267"/></linearGradient>
+    <pattern id="forest-grain" width="39" height="31" patternUnits="userSpaceOnUse"><circle cx="5" cy="11" r=".65" fill="#293B42" opacity=".1"/><circle cx="28" cy="25" r=".6" fill="#293B42" opacity=".07"/><path d="m21 5 3-1m-10 19 2 1" stroke="#293B42" stroke-width=".5" opacity=".08"/></pattern>
+    <clipPath id="boardwalk-face"><path d="m177 434 345-82 548 147-178 205-459 16Z"/></clipPath>
+    <filter id="forest-shadow" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+    <symbol id="forest-leaf" viewBox="0 0 44 25"><path d="M2 13C13-2 31-2 42 12 27 29 13 28 2 13Z" fill="currentColor"/><path d="M4 13h33m-14 0-8-7m13 7 6 6" stroke="#485E4F" stroke-width="1.3" opacity=".45"/></symbol>
+  </defs>
+  <!-- Original composite camp: a quiet clearing, raised boards, and a shallow-water forest. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0h1200v720H0Z" fill="url(#forest-sky)"/>
+    <circle cx="836" cy="105" r="48" fill="#FFF6D9" opacity=".87"/>
+    <circle cx="836" cy="105" r="68" fill="#FFF6D9" opacity=".15"/>
+    <path d="M0 350c96-61 165-24 244-39 96-18 142-51 236-31 92 20 155-28 261-13 106 15 162-24 261-10 103 14 147 34 198 9v195H0Z" fill="#A8B79B"/>
+    <path d="M0 400c106-37 229-10 317-29 116-25 198 17 305-3 127-23 174 6 273-21 108-30 204 10 305-13v164H0Z" fill="#839C80"/>
+    <g stroke="#8BA08A" stroke-width="14" opacity=".8">
+      <path d="M173 358 178 92m85 262-10-246m112 237 13-298m108 291-5-227m65 229 17-279m76 270-5-174m107 168 14-201m104 205-5-196m116 219 5-272m84 280-4-189"/>
+    </g>
+    <g stroke="#8BA08A" stroke-width="5" opacity=".8"><path d="m176 171-39-49m41 84 44-62m34 56-34-38m145 15-41-70m50 101 46-70m109 107-41-48m113 22-40-75m34 133 49-54m124 51-25-53m75 45 39-55m94 24-42-69m47 144 54-84m62 91-29-68"/></g>
+    <path d="M0 46c95-68 180-3 249-18 91-20 146-21 218 13 74 35 123-18 203-21 75-3 99 32 119 63-85 35-191-11-259 16-81 34-128-13-209 8C217 134 158 76 94 118 43 150-2 154-33 127Z" fill="#A6B18B" opacity=".56"/>
+    <path d="M949 15c70-28 104-4 155 7 46 10 93-8 120 12v181c-53 5-78-35-107-45-51-17-67 5-108-25-51-38-101-46-139-69Z" fill="#97A582" opacity=".66"/>
+    <g fill="#D5DCC6" opacity=".5"><ellipse cx="328" cy="244" rx="124" ry="17"/><ellipse cx="704" cy="299" rx="131" ry="14"/><ellipse cx="937" cy="249" rx="96" ry="10"/></g>
+    <path d="M0 378c124-25 228 36 378 27 151-10 176-35 301-18 170 22 221-55 353-40 70 8 115 8 168-13v386H0Z" fill="url(#forest-water)"/>
+    <path d="M0 385c95-17 172 8 257 22m516-10c70-8 131-43 208-37 78 7 126 16 219-18" stroke="#C4D3B9" stroke-width="3"/>
+    <g stroke="#D6DDC5" stroke-width="2" opacity=".58"><path d="m4 447 101 7m-87 45 155 5m-131 43 120 6m-47 47 175 2m-235 72 166-5m789-231 76-1m-117 45 126 3m-108 47 93-2m-30 73 109-1m-132 47 101-3m-62 60 79-4"/></g>
+    <g stroke="#3E6064" stroke-width="2" opacity=".45"><path d="m31 473 117 4m-61 80 147 4m-186 72 133-1m811-172 73 3m-20 61 155-4m-123 99 103-3m-24 41 55-1"/></g>
+    <!-- A distant winding boardwalk provides a route through the trees. -->
+    <path d="m441 330 47-8 26 18-15 7 20 19-29 8-40-29Z" fill="#CDC9A7" stroke="#617462" stroke-width="2"/>
+    <path d="m455 333 36 25m-20-29 29 20m-19-24 23 16" stroke="#8C9675" stroke-width="1.5"/>
+    <path d="M486 390c63-54 176-53 259-46 131 12 219-15 331 27l124 31v122c-101-34-160-11-240-30-137-32-274 13-396-21-66-19-102-56-78-83Z" fill="#A1AA80" stroke="#62795C" stroke-width="2"/>
+    <path d="M570 363c50-15 110-11 161-7m171 20c72-9 136-3 188 14m-501 83 58 10m326 11 48 1" stroke="#C3C8A0" stroke-width="3"/>
+    <path d="m1038 359 5-33 13 32m16 12 9-31 5 34m35 8 6-43 10 41" stroke="#6F8660" stroke-width="3"/>
+    <!-- The wide, low boardwalk curves into the clearing and keeps the objects out of the water. -->
+    <path d="m177 434 345-82 548 147-178 205-459 16Z" fill="url(#forest-wood)" stroke="#293B42" stroke-width="3"/>
+    <path d="m177 434 256 286h26L186 442Zm256 286 459-16 178-205v17L899 720Z" fill="#8F8063" stroke="#293B42" stroke-width="3"/>
+    <g clip-path="url(#boardwalk-face)">
+      <path d="m174 454 904 78m-870-40 843 70m-809-32 780 61m-744-20 714 51m-679-10 644 37m-607 7 573 23m-537 21 502 6" stroke="#8D8766" stroke-width="2"/>
+      <path d="m307 396 253 324m-47-367 194 360m-14-312 183 309m-13-269 70 221" stroke="#A99972" stroke-width="1.5"/>
+      <path d="M275 474c30-6 46 4 67 2m257 47c30-7 77 3 112 5m-165 52c33 3 68-3 100 1m-148 70c54 5 118-2 166 2m121-48c39 0 68-4 104-1m-85-141c33 0 54 8 84 9" stroke="#E8DABA" stroke-width="2" opacity=".6"/>
+      <path d="M0 320h1200v400H0Z" fill="url(#forest-grain)"/>
+      <ellipse cx="305" cy="455" rx="210" ry="100" fill="url(#lantern-pool)"/>
+      <g fill="#736F58" opacity=".7"><circle cx="350" cy="477" r="2"/><circle cx="700" cy="507" r="2"/><circle cx="469" cy="574" r="2"/><circle cx="852" cy="571" r="2"/><circle cx="572" cy="648" r="2"/><circle cx="877" cy="673" r="2"/></g>
+    </g>
+    <!-- Tent, pitched beside the walkway. Its pale front is closed along a visible zipper. -->
+    <g id="camp-tent">
+      <ellipse cx="800" cy="477" rx="238" ry="34" fill="#4E6653" opacity=".18" filter="url(#forest-shadow)"/>
+      <path d="m543 466 154-184 149 24 171 152-224 39Z" fill="url(#tent-cloth)" stroke="#293B42" stroke-width="3"/>
+      <path d="m697 282 96 215 224-39-171-152Z" fill="#A25F49" stroke="#293B42" stroke-width="3"/>
+      <path d="m543 466 154-184 96 215Z" fill="#D29C7B" stroke="#293B42" stroke-width="3"/>
+      <path d="m581 463 116-151 64 171Z" fill="#E9DABC" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m697 312-4 163m4-163 64 171-64-8Z" fill="#C5B795" stroke="#7D795F" stroke-width="1.5"/>
+      <path d="m697 323-2 138" stroke="#354641" stroke-width="2.5"/>
+      <path d="m698 378 8 8-9 6" stroke="#355FCA" stroke-width="3"/>
+      <path d="m661 372-43 71m97-87 30 93m-172 14 98 8m142-91 53 89m-18-148 95 25 76 95" stroke="#E8BA95" stroke-width="2" opacity=".75"/>
+      <path d="m790 497 12 10 219-37-4-12Zm-247-31 3 11 247 21-1-12Z" fill="#7C765B" stroke="#293B42" stroke-width="2"/>
+      <path d="m546 464-57 37m527-43 67 42m-386-218-30-28" stroke="#EBE2C4" stroke-width="2"/>
+      <path d="m484 498 10 13m583-13 10 13m-423-261 5 12" stroke="#355FCA" stroke-width="3"/>
+      <path d="m588 445 2 12m166 9 3 12m77-136 11 3" stroke="#F8EBD1" stroke-width="2"/>
+    </g>
+    <!-- Lantern anchor: 300,430. A glass body and metal guard, with warm reflected light. -->
+    <g id="camp-lantern">
+      <circle cx="301" cy="426" r="106" fill="url(#lantern-halo)"/>
+      <ellipse cx="311" cy="491" rx="50" ry="13" fill="#3E5144" opacity=".22" filter="url(#forest-shadow)"/>
+      <path d="M278 404c-25-59 71-62 47-2" stroke="#293B42" stroke-width="5"/>
+      <path d="M279 401c-19-52 59-53 45-2" stroke="#A9AE89" stroke-width="2"/>
+      <path d="m280 407 42-1 8 66-56 1Z" fill="url(#lantern-glass)" stroke="#293B42" stroke-width="2.5"/>
+      <path d="M278 405c-3-11 47-14 49-2l-5 10-42 1Z" fill="#768664" stroke="#293B42" stroke-width="3"/>
+      <path d="m281 396 7-9 28-1 7 9" fill="#637558" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m277 474-4 10c9 10 49 11 58-1l-3-11Z" fill="#68785C" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="301" cy="474" rx="28" ry="7" fill="#899474" stroke="#293B42" stroke-width="2.5"/>
+      <path d="M287 412c-12 17-15 36-6 60m37-60c12 17 15 36 7 60m-50-29 51-1" stroke="#3C5145" stroke-width="3"/>
+      <path d="M301 418c-1 12-9 15-9 26 0 14 21 13 21-1 0-9-8-11-7-21-3 7-2 9-5 11-4-4 2-12 0-15Z" fill="#FFF9DA"/>
+      <path d="m285 421-1 24m32-15 2 16m-35 38 14 1" stroke="#FFF6D4" stroke-width="2.5" opacity=".85"/>
+      <circle cx="303" cy="389" r="3" fill="#D7DEB5"/>
+    </g>
+    <!-- A folded field notebook is a loose, tangible object, with a route sketched rather than written. -->
+    <g id="field-notebook">
+      <path d="m369 491 104-12 49 58-107 24Z" fill="#3D5348" opacity=".19" filter="url(#forest-shadow)"/>
+      <path d="m356 484 107-16 48 62-110 26Z" fill="#E5D9BC" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m356 484 50 65 109-22-4 9-114 23-42-67Z" fill="#B8BC99" stroke="#293B42" stroke-width="2"/>
+      <path d="m371 485 47 61m-54-52 9-2m-3 10 9-2m-3 10 9-2m-3 10 9-2m-3 10 9-2" stroke="#687C63" stroke-width="2"/>
+      <path d="M397 494c15 10 34-9 48-1 11 8-10 20 5 28 10 5 22 1 28 7" stroke="#355FCA" stroke-width="2.5" stroke-dasharray="4 6"/>
+      <path d="m409 504 8-10 11 8m20 4 7-11 11 8" stroke="#819171" stroke-width="2"/>
+      <circle cx="397" cy="494" r="3" fill="#BC7355"/><circle cx="478" cy="528" r="3" fill="#BC7355"/>
+      <path d="m415 532 16-3m-10 10 33-7" stroke="#949D7D" stroke-width="1.5"/>
+      <path d="m485 478 37 38" stroke="#293B42" stroke-width="6"/>
+      <path d="m485 478 33 34" stroke="#B97154" stroke-width="3"/>
+      <path d="m522 516-6-3 3-3Z" fill="#F1DDB7" stroke="#293B42" stroke-width="1"/>
+    </g>
+    <!-- Worn walking boots anchor: 565,560. -->
+    <g id="camp-boots">
+      <ellipse cx="566" cy="605" rx="83" ry="18" fill="#425348" opacity=".24" filter="url(#forest-shadow)"/>
+      <path d="m566 495 50 5-9 57c7 9 34 10 31 24-2 12-28 18-72 5l-17-19Z" fill="#68745C" stroke="#293B42" stroke-width="3"/>
+      <path d="m565 499 44 5-3 15-43-5Z" fill="#475B4F" stroke="#293B42" stroke-width="2"/>
+      <path d="M549 565c13 5 24 10 31 21 14 4 42 8 58-5v11c-17 11-40 8-65 2l-22-21Z" fill="#3C4941" stroke="#293B42" stroke-width="2"/>
+      <path d="m572 522 25 4m-27 7 25 4m-26 7 23 3m-22-20 24 11m-23-1 21 12" stroke="#E0D3B2" stroke-width="2"/>
+      <path d="m524 520 49 6-10 47c9 7 34 10 31 25-2 13-45 17-73 4l-15-16Z" fill="#A97857" stroke="#293B42" stroke-width="3"/>
+      <path d="m523 522 47 7-3 15-44-7Z" fill="#75664B" stroke="#293B42" stroke-width="2"/>
+      <path d="m532 546 23 4m-24 6 22 4m-23 6 22 4m-20-24 19 14m-21-4 19 15" stroke="#EADBC0" stroke-width="2"/>
+      <path d="M506 583c16 8 13 15 26 19 23 8 45 5 62-4v10c-22 10-44 10-69 0l-18-16Z" fill="#3C4941" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m519 586 10 7m39-15 8 6m-23-44-7 3m57-29-6 4" stroke="#D2B187" stroke-width="2"/>
+      <path d="m531 601 37 3m12-17 39 1" stroke="#B5AB88" stroke-width="1.7"/>
+    </g>
+    <!-- Brass compass anchor: 965,530. -->
+    <g id="camp-compass">
+      <ellipse cx="970" cy="566" rx="54" ry="16" fill="#3C5149" opacity=".24" filter="url(#forest-shadow)"/>
+      <path d="M935 496c-9-16 16-26 23-12l4 11" stroke="#293B42" stroke-width="4"/>
+      <ellipse cx="963" cy="536" rx="48" ry="37" transform="rotate(-14 963 536)" fill="#AF9868" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="963" cy="532" rx="48" ry="37" transform="rotate(-14 963 532)" fill="#D8C391" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="963" cy="532" rx="38" ry="28" transform="rotate(-14 963 532)" fill="#F3EDD7" stroke="#637266" stroke-width="2"/>
+      <path d="m951 512 10 17 5-22-3 25 18-3-17 6 13 14-16-12-4 21 2-23-20 7 18-11Z" fill="#D0D3B7"/>
+      <path d="m963 530 6-23-15 29Z" fill="#355FCA" stroke="#293B42" stroke-width="1.4"/>
+      <path d="m963 530-7 23 15-29Z" fill="#B97254" stroke="#293B42" stroke-width="1.4"/>
+      <circle cx="963" cy="531" r="3.5" fill="#D6BE83" stroke="#293B42" stroke-width="1.2"/>
+      <path d="m935 525 4 1m46-6 4-1m-26 31 1 4m-17-41 2 3m37 29-4-2" stroke="#5A6C60" stroke-width="1.5"/>
+      <path d="m935 517 21-9" stroke="#FFFAE6" stroke-width="3" opacity=".8"/>
+      <path d="M1008 529c21 4 31 18 20 28-17 16-46-4-43 18" stroke="#57674F" stroke-width="2"/>
+    </g>
+    <!-- Foreground trunks and exposed roots frame the clearing without covering its objects. -->
+    <g id="forest-roots">
+      <path d="M32-20h68c-17 67-16 108-6 163 9 60-7 117-2 173 7 77 24 128 48 174l-51 11-33-18-20 3c14-100 19-181 10-272-8-98 17-156-14-234Z" fill="#657259" stroke="#293B42" stroke-width="3"/>
+      <path d="M79 60c10 54-2 90 2 145 5 77-2 172 16 240M52 9c21 90 3 157 4 230m23 68c-3 34 1 65 5 89" stroke="#A0A986" stroke-width="3"/>
+      <path d="M89 273c-15-62-47-79-79-103m70 46c16-72 57-101 86-119M58 127C38 87 7 72-12 63" stroke="#657259" stroke-width="15"/>
+      <path d="M89 273c-15-62-47-79-79-103m70 46c16-72 57-101 86-119" stroke="#9DA581" stroke-width="3"/>
+      <path d="M86 454c25 24 37 61 96 71 35 6 52 23 69 40-37-7-64-16-103-15-37-2-40-30-71-35-19-4-17 41-3 56-28-4-49-39-34-79 8-21 20-21 20-43Z" fill="#6D785B" stroke="#293B42" stroke-width="3"/>
+      <path d="M91 491c19 39 48 38 86 46 20 4 36 10 49 18M59 489c-16 26-9 55 4 67" stroke="#A8AD85" stroke-width="2.5"/>
+      <path d="M1155-18h53v607l-60-9-23 15c-3-46 7-87 26-131 25-66 1-160-7-232-5-79 26-134 11-250Z" fill="#61745A" stroke="#293B42" stroke-width="3"/>
+      <path d="M1172 35c-6 66-13 115-10 169 4 62 27 139 13 209-12 50-25 91-26 139" stroke="#A0AD87" stroke-width="3"/>
+      <path d="M1163 207c-14-54-63-102-99-116m100 34c17-54 47-77 77-98" stroke="#61745A" stroke-width="17"/>
+      <path d="M1164 207c-14-54-63-102-99-116" stroke="#9EAD87" stroke-width="3"/>
+      <path d="M1153 540c-32 20-62 50-73 81 29-17 46-27 72-31 8 42-22 61-30 97 25-10 54-35 55-75 2-31 16-39 29-35" fill="#61745A" stroke="#293B42" stroke-width="3"/>
+      <path d="m1154 566-49 41m59-5c-4 27-10 38-27 58" stroke="#A2AC83" stroke-width="2.5"/>
+      <path d="m33 527-17 39m92-3 46 11m-80 58 74 4m948-16 67 1m-34 61 56-6" stroke="#D0D8BD" stroke-width="2" opacity=".65"/>
+    </g>
+    <g color="#7E916B"><use href="#forest-leaf" x="6" y="121" width="78" height="45" transform="rotate(20 45 143)"/><use href="#forest-leaf" x="98" y="83" width="80" height="46" transform="rotate(-22 138 106)"/><use href="#forest-leaf" x="20" y="28" width="100" height="57" transform="rotate(-19 70 56)"/><use href="#forest-leaf" x="1023" y="61" width="91" height="52" transform="rotate(28 1068 87)"/><use href="#forest-leaf" x="1090" y="108" width="91" height="52" transform="rotate(55 1135 134)"/><use href="#forest-leaf" x="1105" y="17" width="100" height="57" transform="rotate(-22 1155 45)"/></g>
+    <g stroke="#829479" stroke-width="2.5" opacity=".72"><path d="M113 111c-2 19 9 21 3 39m-82 15c-5 12 7 19 2 31m1087-87c-1 15 10 21 4 37m-11 4c1 15 10 19 6 33"/></g>
+    <g fill="#E9E7C3"><circle cx="201" cy="322" r="2"/><circle cx="211" cy="329" r="1.3"/><circle cx="1050" cy="281" r="2"/><circle cx="1040" cy="293" r="1.2"/><circle cx="350" cy="345" r="1.7"/><circle cx="416" cy="310" r="1.2"/></g>
+    <g color="#B97855"><use href="#forest-leaf" x="673" y="618" width="38" height="22" transform="rotate(-16 692 629)"/><use href="#forest-leaf" x="348" y="564" width="28" height="16" transform="rotate(35 362 572)"/></g>
+    <path d="m652 665 39-1m50-69 16 1m-279 82 21 1m400-34 17-4" stroke="#827C5D" stroke-width="1.7"/>
+    <path d="M0 0h1200v720H0Z" fill="url(#forest-grain)" opacity=".55"/>
+  </g>
+</svg>

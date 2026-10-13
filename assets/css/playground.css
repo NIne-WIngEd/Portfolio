@@ -210,3 +210,18 @@
 @media(prefers-reduced-motion:reduce) {
  .playground-page *, .playground-page *::before, .playground-page *::after { animation:none!important; transition:none!important; scroll-behavior:auto; }
 }
+
+/* A small itinerary; all places remain directly reachable at every width. */
+.place-picker { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px; }
+.place-picker button { border:1px solid var(--line); border-radius:6px; background:transparent; padding:12px 18px; font-size:13px; min-height:44px; transition:background .2s,color .2s; }
+.place-picker button>span { font-size:10px; color:var(--muted); margin-right:10px; }
+.place-picker button[aria-pressed=true] { background:var(--ink); border-color:var(--ink); color:#f5f3ed; }
+.place-picker button[aria-pressed=true]>span { color:#bbc5dc; }
+.place-picker button:hover:not([aria-pressed=true]) { background:var(--tint); }
+.scene-title>[data-place-title] { color:inherit; padding:0; }
+.room-scene:not([data-place=desk]) .scene-leaf { display:none; }
+.scriptless-places { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin:24px 0; }
+.scriptless-places img { width:100%; height:auto; border-radius:8px; }
+.scriptless-places figcaption { font-size:13px; margin-top:8px; }
+@media(max-width:800px) { .place-picker { gap:7px; } .place-picker button { padding:10px 12px; font-size:12px; } .place-picker button>span { margin-right:6px; } }
+@media(max-width:450px) { .place-picker button { flex:1 0 28%; } .scriptless-places { grid-template-columns:1fr; } }

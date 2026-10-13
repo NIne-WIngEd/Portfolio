@@ -5,7 +5,7 @@
   if (!scene || typeof HTMLDialogElement === 'undefined' || !HTMLDialogElement.prototype.showModal) return;
   const dialogs = [...document.querySelectorAll('.play-dialog')];
   const reaction = document.querySelector('[data-scene-reaction]');
-  let returnFocus = null;
+  const focusTargets = new WeakMap();
   let mismatchTimer = null;
   let flipped = [];
   let cardsLocked = false;
@@ -28,13 +28,16 @@
   function openToy(id, invoker) {
     const dialog = document.getElementById(id);
     if (!dialog || !dialogs.includes(dialog)) return;
+    const parentDialog = invoker?.closest('.play-dialog');
+    const origin = (parentDialog && focusTargets.get(parentDialog)) || invoker || document.querySelector(`[data-open="${id}"]`);
     dialogs.forEach(other => { if (other.open) other.close(); });
-    returnFocus = invoker || document.querySelector(`[data-open="${id}"]`);
+    focusTargets.set(dialog, origin);
     dialog.showModal();
     reaction.textContent = 'Make yourself at home.';
   }
-  document.querySelectorAll('[data-open]').forEach(button => {
-    button.addEventListener('click', () => openToy(button.dataset.open, button));
+  document.addEventListener('click', event => {
+    const button = event.target.closest('button[data-open]');
+    if (button) openToy(button.dataset.open, button);
   });
   dialogs.forEach(dialog => {
     dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
@@ -45,8 +48,9 @@
     });
     dialog.addEventListener('close', () => {
       if (dialog.id === 'cards-dialog') clearMismatch();
-      if (returnFocus?.isConnected) returnFocus.focus();
-      returnFocus = null;
+      const target = focusTargets.get(dialog);
+      if (!dialogs.some(other => other.open) && target?.isConnected) target.focus();
+      focusTargets.delete(dialog);
     });
   });
 
@@ -171,12 +175,13 @@
   document.querySelector('[data-reset-water]').addEventListener('click', () => connectWater(false));
 
   let fall = false;
-  document.querySelectorAll('[data-fall]').forEach(button => button.addEventListener('click', () => {
+  document.addEventListener('click', event => {
+    if (!event.target.closest('button[data-fall]')) return;
     fall = !fall;
     scene.classList.toggle('fall-in', fall);
     document.querySelectorAll('[data-fall]').forEach(choice => choice.setAttribute('aria-pressed', String(fall)));
     reaction.textContent = fall ? 'Fall is my favorite. I tend to get hopeful in fall.' : 'There’s no particular order.';
-  }));
+  });
 
   let tangerines = false;
   let rewatches = 0;
@@ -221,6 +226,73 @@
   document.addEventListener('visibilitychange', motionAppearance);
   if ('IntersectionObserver' in window) new IntersectionObserver(entries => { sceneVisible = entries[0].isIntersecting; motionAppearance(); }).observe(scene);
 
+  // Each place uses its own original illustration and a small set of physical toys.
+  const places = {
+    desk: { image:'after-hours.svg', title:'A few things I can’t leave alone.', line:'There’s no particular order.', alt:'An illustrated desk with coffee, cards, an investigation, a reservoir model and an autumn window.', objects:[
+      ['coffee-dialog','Coffee?','Coffee',430,440], ['cards-dialog','One quick round','Cards',700,510],
+      ['bread-dialog','Look again','A question',280,340], ['context-dialog','It depends…','Context',830,350],
+      ['water-dialog','One small change','Reservoir',1015,445], ['music-dialog','A little music','Music',160,520],
+      ['screen-dialog','One more episode','Screen',935,180], ['fall','Let fall in','Fall',300,150]
+    ]},
+    rooftop: { image:'rooftop.svg', title:'The city is still awake.', line:'A good night for one more move.', alt:'A late-night rooftop with a telescope, city lights, a chessboard, coffee and headphones.', objects:[
+      ['sky-dialog','A little farther','Telescope',275,300], ['chess-dialog','Your move','Chess',820,495],
+      ['music-dialog','Night music','Headphones',430,520], ['coffee-dialog','Still awake?','Coffee',670,490],
+      ['sky-dialog','Connect the dots','Star chart',930,200]
+    ]},
+    airport: { image:'airport.svg', title:'Somewhere between here and there.', line:'A gate, a book, and a little time.', alt:'A bright airport waiting corner with a plane outside, luggage, postcards, a book and a paper plane.', objects:[
+      ['travel-dialog','A change of scenery','Departures',920,170], ['travel-dialog','A few things to carry','Suitcase',250,520],
+      ['travel-dialog','Wish you were here','Postcards',600,465], ['book-dialog','One more page','Book',840,500],
+      ['flight-dialog','Cleared for takeoff','Paper plane',410,340]
+    ]},
+    forest: { image:'forest-camp.svg', title:'Just outside the familiar.', line:'Leave a little room for the unexpected.', alt:'A dusk camp among forest roots and water, with a lantern, tent, compass and muddy boots.', objects:[
+      ['camp-dialog','A little light','Lantern',300,430], ['camp-dialog','What’s in there?','Tent',720,420],
+      ['camp-dialog','Find your bearings','Compass',965,530], ['camp-dialog','Worth the mud','Boots',565,560]
+    ]},
+    sea: { image:'ship-deck.svg', title:'The horizon has room.', line:'A small push can start a long question.', alt:'A ship deck at dusk with an open horizon, a paper boat, a compass, a notebook and a porthole.', objects:[
+      ['sea-dialog','Give it a push','Paper boat',600,430], ['sea-dialog','Follow the horizon','Compass',290,470],
+      ['sea-dialog','A question at sea','Notebook',825,510], ['circuit-dialog','Make a connection','Porthole',970,300]
+    ]}
+  };
+  const hotspots = document.querySelector('.scene-hotspots');
+  const objectMenu = document.querySelector('.object-menu');
+  const placeButtons = [...document.querySelectorAll('button[data-place]')];
+  function setPlace(key) {
+    if (!places[key]) return;
+    const place = places[key];
+    scene.dataset.place = key;
+    const image = scene.querySelector('.room-illustration');
+    image.src = `assets/img/${place.image}`;
+    image.alt = place.alt;
+    document.querySelector('[data-place-title]').textContent = place.title;
+    reaction.textContent = place.line;
+    placeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.place === key)));
+    hotspots.replaceChildren();
+    objectMenu.replaceChildren();
+    const prompt = document.createElement('span');
+    prompt.textContent = 'Or pick here';
+    objectMenu.append(prompt);
+    place.objects.forEach(([id, label, name, x, y]) => {
+      const hotspot = document.createElement('button');
+      hotspot.type = 'button';
+      hotspot.className = 'scene-hotspot';
+      hotspot.style.left = `${x / 12}%`;
+      hotspot.style.top = `${y / 7.2}%`;
+      hotspot.setAttribute('aria-label', `${name}: ${label}`);
+      const pin = document.createElement('span'); pin.className = 'hotspot-pin'; pin.textContent = id === 'bread-dialog' ? '?' : '+'; pin.setAttribute('aria-hidden', 'true');
+      const caption = document.createElement('span'); caption.className = 'hotspot-label'; caption.textContent = label;
+      hotspot.append(pin, caption);
+      const choice = document.createElement('button'); choice.type = 'button'; choice.textContent = name;
+      [hotspot, choice].forEach(button => {
+        if (id === 'fall') { button.dataset.fall = ''; button.setAttribute('aria-pressed', String(fall)); }
+        else button.dataset.open = id;
+      });
+      hotspots.append(hotspot); objectMenu.append(choice);
+    });
+  }
+  placeButtons.forEach(button => button.addEventListener('click', () => setPlace(button.dataset.place)));
+  document.querySelector('.place-picker').hidden = false;
+  setPlace('desk');
+
   document.querySelector('.scene-hotspots').hidden = false;
   document.querySelector('.object-menu').hidden = false;
   document.querySelectorAll('.scene-tools [data-open]').forEach(button => { button.hidden = false; });
@@ -230,5 +302,10 @@
   const legacy = { bread:'bread-dialog', reservoir:'water-dialog', context:'context-dialog' };
   const fragment = window.location.hash.slice(1);
   const linkedDialog = legacy[fragment] || fragment;
-  if (linkedDialog) openToy(linkedDialog);
+  if (places[fragment]) setPlace(fragment);
+  else if (dialogs.some(dialog => dialog.id === linkedDialog)) {
+    const home = Object.keys(places).find(key => places[key].objects.some(object => object[0] === linkedDialog));
+    if (home) setPlace(home);
+    openToy(linkedDialog);
+  }
 })();

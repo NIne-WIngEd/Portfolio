@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="deck-sky" x1="488" y1="0" x2="457" y2="315" gradientUnits="userSpaceOnUse"><stop stop-color="#E3E9E2"/><stop offset=".63" stop-color="#EEE7D6"/><stop offset="1" stop-color="#E4C9AC"/></linearGradient>
+    <linearGradient id="deck-sea" x1="480" y1="240" x2="364" y2="546" gradientUnits="userSpaceOnUse"><stop stop-color="#799DA5"/><stop offset=".48" stop-color="#628997"/><stop offset="1" stop-color="#3E697C"/></linearGradient>
+    <linearGradient id="deck-wood" x1="757" y1="420" x2="580" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#E1D1B3"/><stop offset="1" stop-color="#C7AC84"/></linearGradient>
+    <linearGradient id="deck-cabin" x1="897" y1="131" x2="1175" y2="518" gradientUnits="userSpaceOnUse"><stop stop-color="#F3ECDD"/><stop offset="1" stop-color="#D9D8BE"/></linearGradient>
+    <linearGradient id="deck-door" x1="926" y1="201" x2="1069" y2="487" gradientUnits="userSpaceOnUse"><stop stop-color="#8C9776"/><stop offset="1" stop-color="#5A725F"/></linearGradient>
+    <linearGradient id="porthole-glass" x1="942" y1="272" x2="1004" y2="337" gradientUnits="userSpaceOnUse"><stop stop-color="#506F78"/><stop offset="1" stop-color="#253F4D"/></linearGradient>
+    <pattern id="deck-grain" width="37" height="31" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r=".65" fill="#293B42" opacity=".1"/><circle cx="26" cy="25" r=".5" fill="#293B42" opacity=".08"/><path d="m17 4 3 1m-10 16 2-1" stroke="#293B42" stroke-width=".5" opacity=".07"/></pattern>
+    <clipPath id="deck-floor"><path d="M0 504 875 417 1200 563v157H0Z"/></clipPath>
+    <clipPath id="porthole-view"><ellipse cx="971" cy="298" rx="40" ry="43" transform="rotate(-6 971 298)"/></clipPath>
+    <filter id="deck-shadow" x="-25%" y="-60%" width="150%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <!-- A symbolic deck at dusk, with an open sea and the small things kept within reach. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0h1200v720H0Z" fill="url(#deck-sky)"/>
+    <circle cx="315" cy="172" r="56" fill="#F8DCAE"/>
+    <circle cx="315" cy="172" r="82" fill="#F8DCAE" opacity=".18"/>
+    <path d="M0 247c168-3 331 4 486 0 157-4 273 7 439 0 120-5 194 2 275 0v329H0Z" fill="url(#deck-sea)"/>
+    <path d="M0 247c156-3 332 4 486 0 157-4 273 7 439 0" stroke="#587884" stroke-width="2"/>
+    <path d="M87 241c37-5 51-17 81-12 22 4 32 8 51 14Z" fill="#7D9182" opacity=".67"/>
+    <g stroke="#C4D4C8" stroke-width="2" opacity=".67"><path d="m-20 277 176 1m44 4 137-1m-84 30 159-2m-342 26 98 3m55-12 132 2m75-27 177 1m-89 28 130-2m-19 34 110 3m-693 32 137-2m60-19 119 3m77-18 58 1m75 30 147-2m-128 42 133 2m-529 14 73-2"/></g>
+    <g stroke="#3D697D" stroke-width="2" opacity=".48"><path d="m66 301 84 1m53 34 118-3m107-48 67 1m34 39 129 1m-532 43 137 2m65 34 115-4m61-48 53 1m148-77 131-1"/></g>
+    <path d="m300 251 30 1 20 16-71 3Zm-22 33 75-1 21 7-101 4Zm-10 21 103-1 20 8-134 3Zm-21 22 145 1 15 7-174 1Z" fill="#EDCFAC" opacity=".55"/>
+    <path d="M190 125c19-5 37-3 49 1m119-45c43-9 66-4 93 1m-18 58c29-3 49-3 65 1m98 38c39-9 67-9 101-7" stroke="#FFFAE7" stroke-width="5" opacity=".53"/>
+    <path d="m563 165 9-5 10 5m40-31 10-4 10 4" stroke="#667C73" stroke-width="2"/>
+    <!-- Light rigging and a mast give the horizon a sense of height. -->
+    <path d="M76-15 101 365" stroke="#293B42" stroke-width="12"/>
+    <path d="M76-15 101 365" stroke="#B5B89A" stroke-width="7"/>
+    <path d="M79 36 519 124m-437-41 6 191m-7-226 242 193m-235-133L-8 211" stroke="#7D8B78" stroke-width="2"/>
+    <path d="m83 44 31 6-4 26-26-8Z" fill="#B67456" stroke="#354641" stroke-width="2"/>
+    <path d="m91 52 16 4-1 9-14-4Z" fill="#E6D9B8"/>
+    <path d="m97 163 10 2m-4 76 10 2m-2 70 10 2" stroke="#DADCC3" stroke-width="3"/>
+    <!-- The floor opens toward the rail; all its long seams share a distant vanishing point. -->
+    <path d="M0 504 875 417 1200 563v157H0Z" fill="url(#deck-wood)" stroke="#293B42" stroke-width="3"/>
+    <g clip-path="url(#deck-floor)">
+      <path d="M-267 720 875 417M-15 720 875 417m-656 303 656-303m-433 303 433-303M644 720 875 417M838 720l37-303m161 303L875 417m386 303L875 417" stroke="#A48E6D" stroke-width="2"/>
+      <path d="m-12 552 950-71m-950 127 1032-83m-1032 141 1160-92M86 721l1114-73" stroke="#B69C76" stroke-width="1.5"/>
+      <path d="M147 629c52-6 71-13 97-11m109 67c35-6 55-17 79-12m64-79c38-17 60-31 84-36m94 99c18-38 24-47 38-56m239 41c-5-29-10-35-14-51M24 577c54 0 94-8 123-15" stroke="#E8D8B9" stroke-width="2" opacity=".62"/>
+      <path d="M0 360h1200v360H0Z" fill="url(#deck-grain)"/>
+      <path d="m925 436-95 284h370V563Z" fill="#738671" opacity=".14"/>
+    </g>
+    <!-- Rails: a broad ledge, slender uprights, and a low line echoing the horizon. -->
+    <g id="ship-rail">
+      <path d="m-18 480 859 73m-829-99 828 73" stroke="#293B42" stroke-width="7"/>
+      <path d="m-18 480 859 73m-829-99 828 73" stroke="#C5CBB2" stroke-width="3"/>
+      <path d="m97 366 14 192m227-166 4 190m224-157-1 185m217-154-11 179" stroke="#293B42" stroke-width="11"/>
+      <path d="m97 366 14 192m227-166 4 190m224-157-1 185m217-154-11 179" stroke="#D7D8BF" stroke-width="6"/>
+      <path d="m-11 331 897 103 18 19-9 15-904-103Z" fill="#B2BBA0" stroke="#293B42" stroke-width="3"/>
+      <path d="m-11 331 897 103 18 19-911-103Z" fill="#E4E0C8" stroke="#293B42" stroke-width="3"/>
+      <path d="m-6 338 889 103m-885 17 892 103" stroke="#F8F1DC" stroke-width="2.5"/>
+      <path d="m85 557 40 3m203 22 29 3m195 26 29 2m177 21 29 3" stroke="#6F7965" stroke-width="4"/>
+      <g fill="#65785F"><circle cx="103" cy="388" r="3"/><circle cx="340" cy="414" r="3"/><circle cx="567" cy="441" r="3"/><circle cx="783" cy="468" r="3"/></g>
+    </g>
+    <!-- A cabin door and circular glass: the listening/engine-room anchor sits at 970,300. -->
+    <g id="engine-room-door">
+      <path d="M874 48 1200 66v523l-326-91Z" fill="url(#deck-cabin)" stroke="#293B42" stroke-width="3"/>
+      <path d="m874 48 18-14 308 17v15Z" fill="#AFB898" stroke="#293B42" stroke-width="3"/>
+      <path d="M874 82 1200 102m-326 359 326 88" stroke="#B8BCA0" stroke-width="2"/>
+      <path d="m894 64 0 432m251-430v472" stroke="#DFE0C7" stroke-width="3"/>
+      <path d="m900 177 184 21v319l-184-48Z" fill="#4D6657" stroke="#293B42" stroke-width="3.5"/>
+      <path d="m911 189 160 18v292l-160-41Z" fill="url(#deck-door)" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m918 198 145 17m-144 231 142 38" stroke="#B5BE9B" stroke-width="2"/>
+      <path d="M923 243v160m7-194 2 30m-5 179v24" stroke="#A0AB88" stroke-width="2" opacity=".67"/>
+      <ellipse cx="973" cy="301" rx="54" ry="57" transform="rotate(-6 973 301)" fill="#52675B" opacity=".45"/>
+      <ellipse cx="971" cy="298" rx="52" ry="55" transform="rotate(-6 971 298)" fill="#C6BD93" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="971" cy="298" rx="43" ry="46" transform="rotate(-6 971 298)" fill="url(#porthole-glass)" stroke="#293B42" stroke-width="3"/>
+      <g clip-path="url(#porthole-view)">
+        <path d="m917 329 103 13v33H917Z" fill="#1E3947"/>
+        <path d="M956 347v-68c0-8 6-14 14-13l38 6m-54 37 46 4v41" stroke="#C6B986" stroke-width="8"/>
+        <path d="M956 347v-68c0-8 6-14 14-13l38 6m-54 37 46 4v41" stroke="#DDD0A6" stroke-width="3"/>
+        <path d="m939 300 43 4v32l-43-4Z" fill="#789384" stroke="#152F3E" stroke-width="2"/>
+        <path d="m946 296 8 1v6l-8-1Zm23 3 8 1v5l-8-1Z" fill="#DAC9A0"/>
+        <path d="m955 308-7 10 10 1-2 9 11-12-10-1 5-7Z" fill="#E7DCB8"/>
+        <path d="m929 259 17-3 45 89-19 1Z" fill="#E4EADB" opacity=".17"/>
+        <path d="m936 268 5 5m-7 1 12 12" stroke="#EEF3E3" stroke-width="3" opacity=".65"/>
+      </g>
+      <g fill="#687961" stroke="#293B42" stroke-width="1"><circle cx="971" cy="250" r="3"/><circle cx="970" cy="346" r="3"/><circle cx="926" cy="294" r="3"/><circle cx="1015" cy="302" r="3"/><circle cx="939" cy="265" r="3"/><circle cx="1005" cy="332" r="3"/></g>
+      <path d="m938 260 17-8m-25 64 6 12" stroke="#F1E7C7" stroke-width="2"/>
+      <path d="m1035 363 16 4v38l-16-4Z" fill="#CDD0AF" stroke="#293B42" stroke-width="2"/>
+      <path d="m1043 375-18-4" stroke="#293B42" stroke-width="7"/>
+      <path d="m1043 375-18-4" stroke="#DEDABC" stroke-width="3"/>
+      <path d="m911 249-9-1v20l9 2m0 133-9-2v20l9 2" fill="#B4BC96" stroke="#293B42" stroke-width="2"/>
+      <path d="m969 413 14 3-11 16 17 3-24 22 8-20-15-4Z" fill="#D7D9B5" opacity=".52"/>
+      <path d="m1125 174 47 5v118l-47-10Z" fill="#A4B099" stroke="#607561" stroke-width="2"/>
+      <path d="m1135 189 27 4m-27 9 27 4m-27 9 27 4m-27 9 27 4m-27 9 27 5m-27 8 27 5m-27 8 27 5m-27 8 27 5" stroke="#62796A" stroke-width="3"/>
+      <path d="M1168 407c-38-3-48 16-36 28 14 14 44 9 54 31" stroke="#788A74" stroke-width="3"/>
+    </g>
+    <!-- A lifebuoy hangs from the rail, its rope trailing down to the coil. -->
+    <g id="deck-lifebuoy">
+      <path d="M172 370c-32 39-3 65-24 86-19 20-23 33 12 46 41 16 68 8 89-12" stroke="#293B42" stroke-width="5"/>
+      <path d="M172 370c-32 39-3 65-24 86-19 20-23 33 12 46 41 16 68 8 89-12" stroke="#D1BD8F" stroke-width="2.5"/>
+      <ellipse cx="167" cy="421" rx="49" ry="55" transform="rotate(-9 167 421)" fill="#DED1AF" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="167" cy="421" rx="26" ry="30" transform="rotate(-9 167 421)" fill="#6A8990" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m147 371 8 23 19-3-2-25m38 35-25 9 2 21 27 2m-57 37 3-20 19-2 11 23m-70-34 26-8-4-21-25 1" fill="#BA7357" stroke="#293B42" stroke-width="2"/>
+      <ellipse cx="167" cy="421" rx="44" ry="50" transform="rotate(-9 167 421)" stroke="#EEE2C2" stroke-width="2" opacity=".55"/>
+      <path d="m174 378 11 5m-63 37 5 18m64 20-8 5" stroke="#F5EACD" stroke-width="3"/>
+    </g>
+    <!-- Rope and a pocket compass anchor: 290,470. -->
+    <g id="deck-rope-compass">
+      <ellipse cx="290" cy="518" rx="83" ry="18" fill="#566354" opacity=".21" filter="url(#deck-shadow)"/>
+      <path d="M232 480c-8-32 119-36 131-7 17 39-119 50-126 15-8-32 104-30 118-10 22 30-96 42-111 18-12-23 82-35 102-15 24 26-66 41-87 21-15-17 58-29 76-16 20 17-35 35-58 19-13-9 23-21 42-13m-75 6c-39 15-48 38-23 47 27 9 63-10 73-6" stroke="#293B42" stroke-width="8"/>
+      <path d="M232 480c-8-32 119-36 131-7 17 39-119 50-126 15-8-32 104-30 118-10 22 30-96 42-111 18-12-23 82-35 102-15 24 26-66 41-87 21-15-17 58-29 76-16 20 17-35 35-58 19-13-9 23-21 42-13m-75 6c-39 15-48 38-23 47 27 9 63-10 73-6" stroke="#CBB68A" stroke-width="5"/>
+      <path d="m250 468 3 6m26-14 2 6m34-6-1 6m28 1-3 5m10 21-6-2m-16 12-3-5m-26 10-1-6m-30 6 1-6m-24-5 3-5m-34 34 3-4m14 12 1-5m20 0-1-5" stroke="#E4D1A5" stroke-width="1.5"/>
+      <path d="m284 442-6-12 12-4 5 11" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="299" cy="457" rx="30" ry="24" transform="rotate(9 299 457)" fill="#B29D71" stroke="#293B42" stroke-width="2.5"/>
+      <ellipse cx="299" cy="454" rx="30" ry="24" transform="rotate(9 299 454)" fill="#D5C18F" stroke="#293B42" stroke-width="2.5"/>
+      <ellipse cx="299" cy="454" rx="23" ry="17" transform="rotate(9 299 454)" fill="#F0EAD5" stroke="#697A68" stroke-width="1.5"/>
+      <path d="m297 454 11-12-16 14Z" fill="#355FCA" stroke="#293B42" stroke-width="1"/>
+      <path d="m297 454-10 12 16-14Z" fill="#B56D51" stroke="#293B42" stroke-width="1"/>
+      <circle cx="299" cy="454" r="2.5" fill="#DDD0A1"/>
+      <path d="m279 450 3 1m32 4 3 1m-20-16 1 3m-1 21 1 3" stroke="#52695D" stroke-width="1.3"/>
+      <path d="m281 443 10-3" stroke="#FFFAE6" stroke-width="2.5"/>
+    </g>
+    <!-- A folded paper boat balances on the broad ledge. Anchor: 600,430. -->
+    <g id="deck-paper-boat">
+      <ellipse cx="601" cy="449" rx="64" ry="10" fill="#475D52" opacity=".21" filter="url(#deck-shadow)"/>
+      <path d="m540 423 65-36 65 45-33 25-67-7Z" fill="#E4D5B5" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m540 423 67 9 63 0-33 25-67-7Z" fill="#F5EFDC" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m565 426 40-39 16 46Z" fill="#FFFAE8" stroke="#293B42" stroke-width="2"/>
+      <path d="m605 387 35 44-19 2Z" fill="#C4CDB6" stroke="#293B42" stroke-width="2"/>
+      <path d="m540 423 30 27 37-18m63 0-33 25-30-25" stroke="#84917B" stroke-width="1.5"/>
+      <path d="m579 426 15-16m-14 34 16 2m31 5 15-7" stroke="#B9C0A9" stroke-width="1.5"/>
+      <path d="m603 411 3 16" stroke="#355FCA" stroke-width="2" opacity=".6"/>
+    </g>
+    <!-- A low storage box gives the open notebook its own surface. Anchor: 825,510. -->
+    <g id="deck-notebook">
+      <path d="m721 603 227-6 22 35-239 17Z" fill="#4A5F51" opacity=".2" filter="url(#deck-shadow)"/>
+      <path d="m722 505 165-29 58 58-171 40Z" fill="#C5B58D" stroke="#293B42" stroke-width="3"/>
+      <path d="m774 574 171-40-8 79-166 32Z" fill="#8D9473" stroke="#293B42" stroke-width="3"/>
+      <path d="m722 505 52 69-3 71-45-69Z" fill="#A4A580" stroke="#293B42" stroke-width="3"/>
+      <path d="m732 512 148-26 46 46-149 33Z" fill="#D9C7A2" stroke="#8B9574" stroke-width="2"/>
+      <path d="m789 576-2 50m132-82-4 58m-180-78 2 43m39 36 160-30" stroke="#667B62" stroke-width="2"/>
+      <path d="m838 568 34-8-1 18-34 8Z" fill="#D9D8B2" stroke="#293B42" stroke-width="2"/>
+      <path d="m850 570 1 9m-1-5 9-2" stroke="#677A66" stroke-width="2"/>
+      <path d="m749 488 68-15 72 21 18 43-81-11-65 20Z" fill="#345EBC" stroke="#293B42" stroke-width="2.5"/>
+      <path d="m755 483 63-13 69 20 15 41-77-13-58 20Z" fill="#F4EDD7" stroke="#293B42" stroke-width="2"/>
+      <path d="m818 470 7 48m-61-28 45-10m-42 18 43-10m-41 19 43-11m-39 19 41-12m17-29 44 12m-43-4 45 13m-43-4 45 12" stroke="#C4CBB0" stroke-width="1.4"/>
+      <path d="M843 492c4-10 15-6 17 2 5 7 11 1 17 6" stroke="#355FCA" stroke-width="2"/>
+      <path d="m839 504 10-5m9 11 14-5" stroke="#7B8F75" stroke-width="1.7"/>
+      <path d="m784 494 15 7-9 12-17-8Z" fill="#D1DBC1" stroke="#809674" stroke-width="1.3"/>
+      <path d="m788 498 6 4-5 6-7-4Z" fill="#96B3AB"/>
+      <path d="m820 475 8 37" stroke="#B57459" stroke-width="2"/>
+      <path d="m829 519 8 21 7-4 6 2-12-20" fill="#B57459"/>
+      <path d="m890 487 29 28" stroke="#293B42" stroke-width="6"/>
+      <path d="m890 487 25 24" stroke="#B57459" stroke-width="3"/>
+      <path d="m920 516-7-2 3-3Z" fill="#E9D0A4" stroke="#293B42" stroke-width="1"/>
+    </g>
+    <!-- Unobtrusive deck details: a bollard, tied rope, and the sheen of old paint. -->
+    <g id="deck-bollard">
+      <ellipse cx="92" cy="666" rx="53" ry="14" fill="#4E6054" opacity=".22" filter="url(#deck-shadow)"/>
+      <path d="m60 620 49 4v31c-2 15-51 8-49-5Z" fill="#69806A" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="84" cy="623" rx="26" ry="12" fill="#9CA78A" stroke="#293B42" stroke-width="3"/>
+      <path d="m58 635 52 6m-47-15 0 15m34-5 1 19" stroke="#D1D4B0" stroke-width="2"/>
+      <path d="M71 635c34 17 109 26 149 3 39-22 54-59 77-80" stroke="#293B42" stroke-width="6"/>
+      <path d="M71 635c34 17 109 26 149 3 39-22 54-59 77-80" stroke="#BDA578" stroke-width="3"/>
+      <path d="m121 650 0-5m20 5 1-5m21 5-1-5m30-1-2-5m19 0-2-5m18-4-3-4m15-8-3-4m19-14-4-3" stroke="#E2CCA0" stroke-width="1.5"/>
+    </g>
+    <path d="m510 578 29 2m-18 7 15 1m128 65 35-5m-22 16 22-4m272 13 15 9m-8-24 28 21m-585 7 25-5" stroke="#A08D69" stroke-width="1.7"/>
+    <path d="m1113 606 32 9m-40 15 46 13" stroke="#DFD1B1" stroke-width="2"/>
+    <path d="M0 0h1200v720H0Z" fill="url(#deck-grain)" opacity=".55"/>
+  </g>
+</svg>
