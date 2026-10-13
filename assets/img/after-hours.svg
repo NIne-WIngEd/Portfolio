@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="wall" x1="230" y1="0" x2="1100" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F3EA"/><stop offset="1" stop-color="#E8E5DA"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="102" y1="37" x2="477" y2="255" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE8EA"/><stop offset="1" stop-color="#EDE3C7"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="97" y1="286" x2="849" y2="713" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9DCC3"/><stop offset=".48" stop-color="#E4D2B4"/><stop offset="1" stop-color="#D4BA95"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="386" y1="376" x2="477" y2="493" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5E8" stop-opacity=".9"/><stop offset=".3" stop-color="#F4E7CB" stop-opacity=".55"/><stop offset="1" stop-color="#F9F3E6" stop-opacity=".85"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="423" y1="398" x2="427" y2="498" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#614231"/><stop offset=".24" stop-color="#906348"/><stop offset=".49" stop-color="#CDA77D"/><stop offset=".69" stop-color="#E9CCA0"/><stop offset="1" stop-color="#EED9B5"/>
+    </linearGradient>
+    <linearGradient id="water" x1="961" y1="409" x2="1080" y2="482" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#82ADB0"/><stop offset="1" stop-color="#365EAC"/>
+    </linearGradient>
+    <linearGradient id="lamp-glow" x1="542" y1="165" x2="537" y2="387" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3CA" stop-opacity=".66"/><stop offset="1" stop-color="#FFF5D4" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="sun-patch" cx="0" cy="0" r="1" gradientTransform="translate(282 291) rotate(35) scale(426 187)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4D4" stop-opacity=".6"/><stop offset="1" stop-color="#FFF4D4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="paper-grain" width="33" height="29" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="8" r=".65" fill="#26343A" opacity=".1"/><circle cx="24" cy="20" r=".5" fill="#26343A" opacity=".08"/>
+      <path d="M15 3h2M7 24h2" stroke="#26343A" stroke-width=".5" opacity=".07"/>
+    </pattern>
+    <pattern id="card-weave" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="m8 1 7 7-7 7-7-7Z" stroke="#F2EADC" stroke-width="1.2" opacity=".44"/>
+      <circle cx="8" cy="8" r="1.1" fill="#F2EADC" opacity=".65"/>
+    </pattern>
+    <clipPath id="window-view"><path d="M112 45h383v189H112Z"/></clipPath>
+    <clipPath id="table-top"><path d="M66 294 1055 257 1197 578 184 672Z"/></clipPath>
+    <clipPath id="coffee-shape"><path d="M386 377c4-9 79-12 90-1l-11 122c-1 15-60 20-65 4Z"/></clipPath>
+    <filter id="soft-shadow" x="-30%" y="-45%" width="175%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <symbol id="leaf" viewBox="0 0 32 48">
+      <path d="M17 45C2 38-3 15 18 2c19 19 10 34-1 43Z" fill="currentColor"/>
+      <path d="m17 45 1-34m0 17-8-9m8 4 7-7" stroke="#29383B" stroke-width="1.3" opacity=".5"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 40 40"><path d="M20 35 5 20C-6 8 9-3 20 9 31-3 46 8 35 20Z" fill="currentColor"/></symbol>
+    <symbol id="spade" viewBox="0 0 40 44"><path d="M20 2 5 18C-5 30 10 41 19 29l-4 12h10l-4-12c9 12 24 1 14-11Z" fill="currentColor"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 1 15 9l8 3-8 3-3 8-3-8-8-3 8-3Z" fill="currentColor"/></symbol>
+  </defs>
+
+  <!-- A composite afternoon room: original shapes, no brands or imported art. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path fill="url(#wall)" d="M0 0h1200v720H0z"/>
+    <path fill="url(#paper-grain)" d="M0 0h1200v720H0z"/>
+    <path d="M0 552 1200 507v213H0Z" fill="#DED6C7"/>
+    <path d="m0 552 1200-45" stroke="#A9A69A" stroke-width="2"/>
+    <path d="M36 680 1155 654" stroke="#BEB8AA" stroke-width="1.5"/>
+    <path d="m836 549 27 171M261 550l-42 170" stroke="#BEB8AA" stroke-width="1.5"/>
+
+    <!-- Window, tree, and autumn outside. Object center: 300, 150. -->
+    <g id="fall-window">
+      <path d="M91 30h421v216H91Z" fill="#BBAF98" opacity=".2" transform="translate(11 8)"/>
+      <path d="M91 30h421v216H91Z" fill="#E8DDC8" stroke="#283B42" stroke-width="3"/>
+      <path d="M111 45h385v189H111Z" fill="url(#sky)"/>
+      <g clip-path="url(#window-view)">
+        <circle cx="427" cy="84" r="39" fill="#FFF2CB" opacity=".8"/>
+        <path d="M82 225c76-47 132-6 205-20 73-15 128-9 232-34v71H82Z" fill="#A6AC8D"/>
+        <path d="M93 220c98 4 183 24 290 0 52-12 100-14 133-6v32H93Z" fill="#C2BA90"/>
+        <path d="M221 265c6-53 15-88 11-123-3-32-17-45-29-62" stroke="#5D6953" stroke-width="13"/>
+        <path d="M230 168c-15-36-53-38-62-76m61 44c12-30 47-51 47-87m-45 114c32-8 54-26 66-53m-64-12c-6-28-21-45-30-55" stroke="#5D6953" stroke-width="6"/>
+        <path d="m169 96-35-11m141-29 30-21m-96 27-29-24m101 65 38-7" stroke="#5D6953" stroke-width="3.5"/>
+        <g color="#B76143">
+          <use href="#leaf" x="140" y="61" width="27" height="40" transform="rotate(-45 153 81)"/>
+          <use href="#leaf" x="164" y="43" width="33" height="49" transform="rotate(-19 180 67)"/>
+          <use href="#leaf" x="207" y="30" width="31" height="47" transform="rotate(44 222 54)"/>
+          <use href="#leaf" x="251" y="67" width="31" height="46" transform="rotate(49 266 90)"/>
+          <use href="#leaf" x="290" y="92" width="33" height="48" transform="rotate(57 306 116)"/>
+          <use href="#leaf" x="205" y="103" width="25" height="38" transform="rotate(-21 217 122)"/>
+        </g>
+        <g color="#D19450">
+          <use href="#leaf" x="118" y="69" width="27" height="41" transform="rotate(-72 131 89)"/>
+          <use href="#leaf" x="185" y="54" width="30" height="45" transform="rotate(17 200 76)"/>
+          <use href="#leaf" x="255" y="25" width="33" height="49" transform="rotate(27 271 49)"/>
+          <use href="#leaf" x="306" y="53" width="28" height="42" transform="rotate(63 320 74)"/>
+          <use href="#leaf" x="176" y="115" width="27" height="40" transform="rotate(-42 189 135)"/>
+        </g>
+        <g color="#879263">
+          <use href="#leaf" x="151" y="113" width="25" height="38" transform="rotate(-62 163 132)"/>
+          <use href="#leaf" x="236" y="47" width="27" height="41" transform="rotate(37 249 67)"/>
+          <use href="#leaf" x="276" y="131" width="29" height="43" transform="rotate(51 290 152)"/>
+        </g>
+        <use href="#leaf" x="366" y="151" width="14" height="22" color="#B76143" transform="rotate(46 373 162)"/>
+        <use href="#leaf" x="402" y="190" width="13" height="20" color="#D19450" transform="rotate(-38 408 200)"/>
+        <path d="M374 141c11 0 10-9 16-10m7 46c6-7 14-2 18-8" stroke="#839292" stroke-width="1.5" opacity=".6"/>
+        <path d="m137 222 17-3m117 12 18-2m175-16 13 1" stroke="#A5754E" stroke-width="2"/>
+      </g>
+      <path d="M111 45h385v189H111Zm193 0v189M111 143h385" stroke="#293B43" stroke-width="3"/>
+      <path d="M120 52h174m19 0h174M119 151h174m19 0h175" stroke="#FFFBF0" stroke-width="3" opacity=".7"/>
+      <path d="m109 253 388-2 33 19-441 2Z" fill="#D9C9AD" stroke="#293B43" stroke-width="3"/>
+      <path d="m89 273 441-3v12l-441 4Z" fill="#B9A58A" stroke="#293B43" stroke-width="2"/>
+      <path d="M332 55 372 55 466 226 429 226Z" fill="#FFFBEF" opacity=".18"/>
+      <path d="m154 56 29 0 87 170h-28Z" fill="#FFFBEF" opacity=".19"/>
+    </g>
+
+    <!-- Warm wall details make the room feel inhabited without biography. -->
+    <path d="M608 53h128v90H608Z" fill="#DCD5C4" opacity=".7" transform="rotate(-4 672 98)"/>
+    <g transform="rotate(-4 672 98)">
+      <path d="M604 48h128v89H604Z" fill="#F4ECD9" stroke="#44504B" stroke-width="2"/>
+      <path d="M621 119c15-23 30-12 43-37 14-28 29-4 51-20" stroke="#B9674B" stroke-width="5"/>
+      <path d="M620 120c36-15 53 15 91-17" stroke="#77865E" stroke-width="3"/>
+      <circle cx="690" cy="77" r="10" fill="#C3A466"/>
+      <path d="m647 44 43-3 1 12-43 4Z" fill="#D5CAA9" opacity=".85"/>
+    </g>
+    <path d="M1118 91c-8 47-15 94-14 150" stroke="#A8A18B" stroke-width="2"/>
+    <path d="m1107 156 12-32m-15 66-18-30m20-29-18-21" stroke="#5F705B" stroke-width="3"/>
+    <path d="M1116 130c-4-22 14-30 20-29 4 18-6 30-20 29Zm-15 44c-17-3-24-13-22-29 16 0 26 13 22 29Zm6-22c-3-22-18-33-31-28 1 19 16 28 31 28Z" fill="#87916F"/>
+    <path d="m1081 237 52-2-7 43-37 2Z" fill="#B86E52" stroke="#34403F" stroke-width="2.5"/>
+    <path d="M1084 239c14 7 34 5 46-2" stroke="#E5B598" stroke-width="2"/>
+
+    <!-- The desk is one continuous perspective plane. -->
+    <ellipse cx="695" cy="676" rx="489" ry="38" fill="#6F715E" opacity=".13" filter="url(#soft-shadow)"/>
+    <path d="m201 651 51-6-12 75h-39Zm895-114 39-6 35 189h-34Z" fill="#65735F" stroke="#283B42" stroke-width="3"/>
+    <path d="m221 677 14-1-6 44m902-153 19 108" stroke="#A5AD8A" stroke-width="4"/>
+    <path d="M66 294 1055 257 1197 578 184 672Z" fill="url(#wood)" stroke="#293A42" stroke-width="3"/>
+    <path d="m184 672 1013-94v19l-1012 94-119-374v-23Z" fill="#BA9772" stroke="#293A42" stroke-width="3"/>
+    <path d="m185 678 1006-93" stroke="#F1DBBA" stroke-width="3"/>
+    <g clip-path="url(#table-top)">
+      <path d="M87 283 206 666M335 280l118 369m135-380 103 359m147-368 91 352" stroke="#B99775" stroke-width="1.5" opacity=".5"/>
+      <path d="M207 328c110 0 92-24 204-19m-134 278c129-16 102-12 193-24M812 552c113-10 124-23 239-24M682 319c100 0 73-11 164-11" stroke="#C6AA84" stroke-width="1.5" opacity=".58"/>
+      <path d="M121 332 629 281 867 541 356 638Z" fill="url(#sun-patch)"/>
+      <path d="m111 294 137-5 387 342-144 14Z" fill="#FFF7DB" opacity=".21"/>
+      <path d="m274 290 107-4 386 331-107 9Z" fill="#FFF7DB" opacity=".24"/>
+      <path d="m244 288 22-1 386 332-25 2Z" fill="#607769" opacity=".08"/>
+      <path d="m344 287 8-1 387 333-10 1Z" fill="#607769" opacity=".1"/>
+      <path fill="url(#paper-grain)" d="M0 250h1200v470H0Z"/>
+    </g>
+
+    <!-- The small screen: original generic playback shapes, no app chrome. -->
+    <g id="screen">
+      <ellipse cx="950" cy="296" rx="94" ry="13" fill="#5B655A" opacity=".16" filter="url(#soft-shadow)"/>
+      <path d="m923 237 35-2 8 44-40 3Z" fill="#61715F" stroke="#293A42" stroke-width="3"/>
+      <path d="m911 272 66-3 29 18-101 7-19-9Z" fill="#7B886C" stroke="#293A42" stroke-width="3"/>
+      <path d="M843 83 1047 96l-3 144-208-3Z" fill="#63705C" stroke="#293A42" stroke-width="3.5"/>
+      <path d="m854 97 178 12-3 113-179 1Z" fill="#293C4B" stroke="#172E3D" stroke-width="2"/>
+      <path d="m860 105 165 11-3 100-167 1Z" fill="#C1CDD0"/>
+      <path d="m855 104 170 11-2 68c-50-4-108-17-171-25Z" fill="#DCE3DC"/>
+      <path d="M873 154c21-28 36 14 58-12 18-24 38 27 60 0 10-11 20-8 28-2" stroke="#63888B" stroke-width="2.5" opacity=".5"/>
+      <circle cx="936" cy="160" r="28" fill="#F5F0DF" stroke="#263D4C" stroke-width="2.5"/>
+      <path d="m931 146 18 15-19 11Z" fill="#355FCA"/>
+      <path d="M978 164a14 14 0 0 1 21-11l4 3m0-9v9h-9M1004 166a14 14 0 0 1-23 13l-4-3m0 9v-9h9" stroke="#49635E" stroke-width="2.7"/>
+      <path d="m873 205 130-1" stroke="#71847B" stroke-width="3"/>
+      <path d="m873 205 57-1" stroke="#355FCA" stroke-width="3"/>
+      <circle cx="930" cy="204" r="4" fill="#355FCA"/>
+      <circle cx="940" cy="231" r="2" fill="#D7DECA"/>
+      <path d="m864 115 29 2 65 99-30 1Z" fill="#FFF9E8" opacity=".21"/>
+      <path d="m845 83 204 13-5 144" stroke="#A4AE8C" stroke-width="2"/>
+    </g>
+
+    <!-- Task lamp and its pool of light, connecting wall and desktop. -->
+    <g id="lamp">
+      <path d="m490 172-92 228 294-10-128-214Z" fill="url(#lamp-glow)"/>
+      <ellipse cx="651" cy="346" rx="56" ry="14" fill="#626951" opacity=".2" filter="url(#soft-shadow)"/>
+      <ellipse cx="636" cy="331" rx="49" ry="16" fill="#61705A" stroke="#293B42" stroke-width="3"/>
+      <path d="M587 330v8c4 22 91 22 98-2v-8" fill="#4B5D50" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="636" cy="328" rx="49" ry="15" fill="#869070" stroke="#293B42" stroke-width="3"/>
+      <path d="m637 325-10-82 42-67-73-62-41 30" stroke="#293B42" stroke-width="13"/>
+      <path d="m637 325-10-82 42-67-73-62-41 30" stroke="#829171" stroke-width="7"/>
+      <circle cx="627" cy="244" r="10" fill="#6D7F65" stroke="#293B42" stroke-width="3"/>
+      <circle cx="669" cy="176" r="10" fill="#6D7F65" stroke="#293B42" stroke-width="3"/>
+      <circle cx="596" cy="114" r="9" fill="#6D7F65" stroke="#293B42" stroke-width="3"/>
+      <path d="M551 132c-23-10-51-1-55 20l-24 33c28-1 64 5 94 17l-8-43c5-10 3-21-7-27Z" fill="#859272" stroke="#293B42" stroke-width="3"/>
+      <ellipse cx="519" cy="192" rx="48" ry="11" transform="rotate(10 519 192)" fill="#F3DEAD" stroke="#293B42" stroke-width="3"/>
+      <path d="m503 147-13 25m26-30-7 28" stroke="#B8C19A" stroke-width="3"/>
+      <path d="m590 329 30-1" stroke="#C2CAA6" stroke-width="2"/>
+      <path d="m688 338 24 26 93-1" stroke="#293B42" stroke-width="2"/>
+    </g>
+
+    <!-- Bread investigation: a handwritten puzzle and a tangible lens. Center: 280, 340. -->
+    <g id="bread-investigation">
+      <path d="m177 317 171-18 38 113-171 22Z" fill="#5E644F" opacity=".17" filter="url(#soft-shadow)"/>
+      <path d="m166 306 174-16 40 112-175 24Z" fill="#F6F0DE" stroke="#4A5149" stroke-width="2.5"/>
+      <path d="m180 310 155-14 34 94-156 22Z" fill="url(#paper-grain)"/>
+      <path d="m179 322 146-15m-134 75 146-15m-143 27 69-8" stroke="#C2C7B2" stroke-width="1.5"/>
+      <path d="m195 336 6 63" stroke="#BD7860" stroke-width="1.5" opacity=".5"/>
+      <path d="M218 356c-5-14 1-27 18-31 19-7 41-1 50 16l9 30-66 9Z" fill="#B97548" stroke="#514337" stroke-width="2.5"/>
+      <path d="M230 357c-4-11 2-22 13-25 13-4 28 1 34 11l8 20-48 9Z" fill="#E6BE7F" stroke="#A77243" stroke-width="1.6"/>
+      <path d="m242 339 0 6m11-8 1 7m11-2 2 6" stroke="#A77243" stroke-width="3"/>
+      <circle cx="245" cy="357" r="2" fill="#A77243"/><circle cx="266" cy="354" r="1.7" fill="#A77243"/>
+      <path d="M307 318c-5-7-17-3-16 4m16-4c6 11-8 15-6 22m0 9h.1" stroke="#335ECC" stroke-width="4"/>
+      <path d="m224 392 38-6m-33 13 57-6" stroke="#79856A" stroke-width="2"/>
+      <path d="m333 390 17 20" stroke="#5D6953" stroke-width="11"/>
+      <path d="m333 390 17 20" stroke="#859271" stroke-width="6"/>
+      <ellipse cx="310" cy="363" rx="31" ry="29" transform="rotate(-10 310 363)" fill="#DBE6DD" fill-opacity=".55" stroke="#293B42" stroke-width="5"/>
+      <ellipse cx="310" cy="363" rx="25" ry="23" transform="rotate(-10 310 363)" stroke="#90ABAA" stroke-width="1.6"/>
+      <path d="m294 354 22-6m-22 11 30-8" stroke="#FFFBEF" stroke-width="4" opacity=".8"/>
+      <path d="m325 386 5 6" stroke="#293B42" stroke-width="5"/>
+      <path d="m182 301 38-4 1 11-37 5Z" fill="#C5C9AC" opacity=".8"/>
+    </g>
+
+    <!-- Notes in the margin: the same word can lead somewhere else. Center: 830, 350. -->
+    <g id="context-paper">
+      <path d="m748 316 142-19 55 112-151 28Z" fill="#4D6059" opacity=".18" filter="url(#soft-shadow)"/>
+      <path d="m735 304 151-16 51 109-157 29Z" fill="#F5EFDF" stroke="#4A554C" stroke-width="2.5"/>
+      <path d="m749 313 111-12m-103 24 113-13m-105 24 113-14m-105 25 113-15m-104 26 113-16m-104 26 113-17m-103 27 113-18m-104 27 111-18" stroke="#C6CCB7" stroke-width="1.5"/>
+      <path d="m770 300 44 117" stroke="#BA785D" stroke-width="1.7" opacity=".6"/>
+      <path d="m785 326 54-6 12 26-55 7Z" fill="#D9DFCA"/>
+      <text x="798" y="345" transform="rotate(-7 798 345)" fill="#355FCA" font-family="Georgia, serif" font-size="23" font-style="italic">lead</text>
+      <path d="m853 329 20 1m-8-5 8 5-4 9m-11 6 19 19m-5-8 5 8-9 2" stroke="#B96D51" stroke-width="2"/>
+      <path d="m871 315 7 13-11 1Zm13 53 7 9-8 3-7-9Z" fill="#778762"/>
+      <path d="m806 374 44-6m-40 15 56-9" stroke="#738064" stroke-width="2.5"/>
+      <path d="m832 291 24-3 4 10-26 5Z" fill="#D1C3A4" opacity=".8"/>
+      <path d="m929 360-63 49" stroke="#293B42" stroke-width="8"/>
+      <path d="m929 360-55 42" stroke="#BD7252" stroke-width="5"/>
+      <path d="m865 409 10-4-4-5Z" fill="#E9CF9F" stroke="#293B42" stroke-width="1.5"/>
+    </g>
+
+    <!-- Iced espresso, milk ribbons, and the little imperfections of glass. Center: 430, 440. -->
+    <g id="coffee">
+      <ellipse cx="458" cy="521" rx="69" ry="17" fill="#5C6759" opacity=".2" filter="url(#soft-shadow)"/>
+      <ellipse cx="435" cy="511" rx="60" ry="18" fill="#8D977C" stroke="#425148" stroke-width="2"/>
+      <ellipse cx="435" cy="508" rx="55" ry="16" fill="#B3B995"/>
+      <path d="M386 377c4-9 79-12 90-1l-11 122c-1 15-60 20-65 4Z" fill="url(#glass)" stroke="#2E444B" stroke-width="3.5"/>
+      <g clip-path="url(#coffee-shape)">
+        <path d="M389 405c22 9 57 6 84-2l-9 93c-1 15-60 19-64 7Z" fill="url(#coffee)"/>
+        <path d="M404 417c20 12 16 27 37 30 15 2 25-9 27-8m-68-4c14 0 12 31 43 34 15 1 23-4 29-7m-71 19c14 5 20-3 37 5 16 7 23 1 33-3" stroke="#F1D8AE" stroke-width="4" opacity=".75"/>
+        <path d="M397 401c22 13 59 9 76-2" stroke="#513A2F" stroke-width="8"/>
+        <path d="m403 385 23-3 3 23-20 4Zm34 0 25 2-4 22-21-2Zm-11 25 26-2 1 22-23 3Z" fill="#C8D7CF" fill-opacity=".69" stroke="#E3E7D5" stroke-width="2"/>
+        <path d="m407 390 11-2m26 3 10 1m-20 24 12-1" stroke="#FFF8E9" stroke-width="2" opacity=".9"/>
+        <path d="m403 441 2 53m56-51-3 47" stroke="#FFF9E9" stroke-width="4" opacity=".52"/>
+        <path d="M398 500c13 8 48 10 65-3" stroke="#B5C4BA" stroke-width="3" opacity=".65"/>
+      </g>
+      <ellipse cx="431" cy="377" rx="45" ry="11" fill="#D5DCCB" fill-opacity=".35" stroke="#2E444B" stroke-width="3"/>
+      <path d="M393 375c17-6 47-7 64-2" stroke="#FFFCED" stroke-width="3"/>
+      <path d="m449 391 11-66" stroke="#293B42" stroke-width="7"/>
+      <path d="m449 391 11-66" stroke="#BB6D51" stroke-width="4"/>
+      <path d="m403 425 2 58" stroke="#FFFAEE" stroke-width="3" opacity=".72"/>
+      <ellipse cx="391" cy="431" rx="2" ry="3" fill="#F6FAED"/><ellipse cx="469" cy="439" rx="2" ry="3" fill="#F6FAED"/>
+      <path d="m378 529 16-2m91-8 10-2" stroke="#8C9275" stroke-width="2"/>
+    </g>
+
+    <!-- Three abstract records, casually overlapping beside the coffee. Center: 160, 520. -->
+    <g id="music-discs">
+      <ellipse cx="184" cy="582" rx="91" ry="17" fill="#59644F" opacity=".16" filter="url(#soft-shadow)"/>
+      <g transform="rotate(-13 128 516)">
+        <path d="M61 464h123v112H61Z" fill="#EEE5CE" stroke="#394A48" stroke-width="2.5"/>
+        <path d="M72 475h101v90H72Z" fill="#BD7156"/>
+        <path d="M72 550c36-43 52-54 101-66v81H72Z" fill="#D49B78"/>
+        <path d="M84 555c13-41 20-46 57-70" stroke="#ECDDAB" stroke-width="9"/>
+        <ellipse cx="127" cy="520" rx="35" ry="37" fill="#3B4D52"/>
+        <ellipse cx="127" cy="520" rx="27" ry="29" stroke="#A2AFAC" stroke-width="1" opacity=".35"/>
+        <ellipse cx="127" cy="520" rx="20" ry="22" stroke="#A2AFAC" stroke-width="1" opacity=".35"/>
+        <ellipse cx="127" cy="520" rx="10" ry="11" fill="#F0D4AE"/><circle cx="127" cy="520" r="2.5" fill="#3B4D52"/>
+      </g>
+      <g transform="rotate(9 182 536)">
+        <path d="M133 489h110v104H133Z" fill="#78886C" stroke="#394A48" stroke-width="2.5"/>
+        <path d="M144 500h88v82h-88Z" fill="#D4D7B1"/>
+        <path d="M144 582v-62l43 31 45-42v73Z" fill="#879773"/>
+        <circle cx="187" cy="542" r="33" fill="#3454AD"/>
+        <circle cx="187" cy="542" r="27" stroke="#8BA4CB" stroke-width="1" opacity=".5"/>
+        <circle cx="187" cy="542" r="20" stroke="#8BA4CB" stroke-width="1" opacity=".5"/>
+        <circle cx="187" cy="542" r="10" fill="#E6E4C6"/><circle cx="187" cy="542" r="2.5" fill="#3454AD"/>
+      </g>
+      <ellipse cx="152" cy="568" rx="38" ry="37" transform="rotate(-13 152 568)" fill="#293E4C" stroke="#243B45" stroke-width="2"/>
+      <ellipse cx="152" cy="568" rx="31" ry="30" transform="rotate(-13 152 568)" stroke="#96A6A3" stroke-width="1" opacity=".38"/>
+      <ellipse cx="152" cy="568" rx="24" ry="23" transform="rotate(-13 152 568)" stroke="#96A6A3" stroke-width="1" opacity=".38"/>
+      <ellipse cx="152" cy="568" rx="12" ry="11" transform="rotate(-13 152 568)" fill="#BF795A"/>
+      <circle cx="152" cy="568" r="3" fill="#EEDCC2"/>
+      <path d="m134 540 9-4m-15 12 19-8" stroke="#9BAA9F" stroke-width="2" opacity=".5"/>
+    </g>
+
+    <!-- Cards belong to the same tabletop, with individual ink and paper details. Center: 700, 510. -->
+    <g id="playing-cards">
+      <path d="m565 497 148-78 125 120-155 87Z" fill="#5A6251" opacity=".19" filter="url(#soft-shadow)"/>
+      <g transform="rotate(-24 615 501)">
+        <rect x="564" y="430" width="101" height="145" rx="9" fill="#E9D4AF" stroke="#293B42" stroke-width="2.5"/>
+        <rect x="569" y="426" width="101" height="145" rx="9" fill="#315CC6" stroke="#293B42" stroke-width="2.5"/>
+        <rect x="579" y="437" width="81" height="124" rx="3" fill="url(#card-weave)" stroke="#EEE4CB" stroke-width="2"/>
+        <path d="m620 460 25 39-25 39-25-39Z" fill="#EEE4CB"/>
+        <path d="m620 475 16 24-16 24-16-24Z" fill="#BD795C"/>
+        <use href="#spark" x="610" y="489" width="20" height="20" color="#EEE4CB"/>
+      </g>
+      <g transform="rotate(-7 687 501)">
+        <rect x="639" y="431" width="101" height="145" rx="9" fill="#DEC6A4" stroke="#293B42" stroke-width="2.5"/>
+        <rect x="637" y="427" width="101" height="145" rx="9" fill="#F4ECD9" stroke="#293B42" stroke-width="2.5"/>
+        <path d="m650 452 10-16 11 15m-17-4h12" stroke="#A85943" stroke-width="2.5"/>
+        <use href="#heart" x="650" y="454" width="20" height="20" color="#B9694E"/>
+        <use href="#heart" x="670" y="480" width="40" height="40" color="#B9694E"/>
+        <use href="#heart" x="706" y="538" width="20" height="20" color="#B9694E" transform="rotate(180 716 548)"/>
+        <path d="m650 533 18 1m43-94 13 1" stroke="#D6CAB4" stroke-width="1.5"/>
+      </g>
+      <g transform="rotate(12 754 520)">
+        <rect x="704" y="450" width="101" height="145" rx="9" fill="#DCC6A2" stroke="#293B42" stroke-width="2.5"/>
+        <rect x="701" y="445" width="101" height="145" rx="9" fill="#F3ECD8" stroke="#293B42" stroke-width="2.5"/>
+        <path d="M716 460h9l-8 17m-3 0h13" stroke="#355FCA" stroke-width="2.5"/>
+        <use href="#spade" x="714" y="480" width="19" height="21" color="#355FCA"/>
+        <use href="#spade" x="741" y="468" width="22" height="25" color="#355FCA"/>
+        <use href="#spade" x="741" y="504" width="22" height="25" color="#355FCA"/>
+        <use href="#spade" x="741" y="540" width="22" height="25" color="#355FCA" transform="rotate(180 752 552)"/>
+        <use href="#spade" x="772" y="527" width="19" height="21" color="#355FCA" transform="rotate(180 781 537)"/>
+        <use href="#spade" x="714" y="535" width="19" height="21" color="#355FCA" transform="rotate(180 723 545)"/>
+        <path d="m781 575-9-1 8-15m4 0h-13" stroke="#355FCA" stroke-width="2.5"/>
+      </g>
+      <path d="m831 562 28-7m-29 18 15-3" stroke="#B68A63" stroke-width="2" opacity=".6"/>
+    </g>
+
+    <!-- A tabletop reservoir model: terrain, water, dam, and a ribbon of river. Center: 1015, 445. -->
+    <g id="reservoir-model">
+      <ellipse cx="1046" cy="520" rx="110" ry="19" fill="#596550" opacity=".19" filter="url(#soft-shadow)"/>
+      <path d="m930 431 134-46 89 74-135 59Z" fill="#657257" stroke="#293B42" stroke-width="3"/>
+      <path d="m930 431 88 72 135-54v18l-135 56-88-74Z" fill="#8C795E" stroke="#293B42" stroke-width="3"/>
+      <path d="m940 430 122-39 80 67-124 50Z" fill="#A4AB83"/>
+      <path d="m943 430 24-27 37-4 16 22-22 17-20 1-16 16Z" fill="#768961" stroke="#5F7657" stroke-width="1.5"/>
+      <path d="m967 405 15 13 19-16m-45 31 15-13 22 10" stroke="#C0C49A" stroke-width="2"/>
+      <path d="m1059 391 17 11 3 21 26 13 15 26-23 20-36-9-13-38-22-18Z" fill="#86996F"/>
+      <path d="m1076 405 14 14-12 8 30 20m-53-20 15 8 12 35" stroke="#BDC49B" stroke-width="2"/>
+      <path d="M982 426c18-21 50-28 67-12 10 8-3 21 8 28l22 13-38 23-28-5c-4-15-31-25-31-47Z" fill="url(#water)" stroke="#355F8E" stroke-width="2"/>
+      <path d="M996 425c9-9 27-10 36-6m-38 22 26-1m-8 11 21-3m-9 17 10-1" stroke="#D2E3D5" stroke-width="2" opacity=".8"/>
+      <path d="m1035 466 35-21 12 9-35 23Z" fill="#E7E0CC" stroke="#394A4B" stroke-width="2.5"/>
+      <path d="m1047 477 35-23v15l-35 21Z" fill="#AEAFA1" stroke="#394A4B" stroke-width="2"/>
+      <path d="m1044 461 9 15m1-21 9 15m1-21 9 15" stroke="#949D92" stroke-width="2"/>
+      <path d="M1053 482c0 10 14 6 10 15-5 9-18 6-20 14" stroke="#4267B5" stroke-width="9"/>
+      <path d="M1053 482c0 10 14 6 10 15-5 9-18 6-20 14" stroke="#9CBFBE" stroke-width="3"/>
+      <path d="m957 435 5-15 10 10-4 11Zm132 29 5-18 12 13-5 12Z" fill="#4F6F58"/>
+      <path d="m962 435 1 10m37-51v13m105-5v11" stroke="#425C4A" stroke-width="2.5"/>
+      <path d="m988 400 12-23 11 20Z" fill="#58765B" stroke="#425C4A" stroke-width="1.5"/>
+      <path d="m1097 412 7-19 9 17Z" fill="#58765B" stroke="#425C4A" stroke-width="1.5"/>
+      <path d="m938 452 71 58 13-5m9 8 93-39" stroke="#BAA382" stroke-width="2"/>
+    </g>
+
+    <!-- Small shared-surface details: a fallen leaf, a loose cable, and paper edges. -->
+    <use href="#leaf" x="324" y="564" width="31" height="44" color="#B96E50" transform="rotate(75 340 586)"/>
+    <path d="m329 586-16 9" stroke="#5B674F" stroke-width="2"/>
+    <path d="M913 291c-22 5-4 30 29 27 33-3 57 9 27 25-24 13-39 10-36 30" stroke="#475D58" stroke-width="2"/>
+    <path d="M898 539c-5 4-3 15 9 15 12 0 13-11 8-15-4-4-13-4-17 0Z" stroke="#93845F" stroke-width="2"/>
+    <path d="m886 536 42-2" stroke="#93845F" stroke-width="1.5"/>
+    <path d="m363 322 28-3m-22 10 15-2" stroke="#AD9676" stroke-width="2"/>
+    <path d="m492 558 18-2m-9 11 30-3" stroke="#AA9374" stroke-width="2"/>
+    <path d="m51 703 93-1" stroke="#B8B1A0" stroke-width="2"/>
+  </g>
+</svg>
