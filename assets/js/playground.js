@@ -246,10 +246,10 @@
     ]},
     forest: { image:'forest-camp.svg', title:'Just outside the familiar.', line:'Leave a little room for the unexpected.', alt:'A dusk camp among forest roots and water, with a lantern, tent, compass and muddy boots.', objects:[
       ['camp-dialog','A little light','Lantern',300,430], ['camp-dialog','What’s in there?','Tent',720,420],
-      ['camp-dialog','Find your bearings','Compass',965,530], ['camp-dialog','Worth the mud','Boots',565,560]
+      ['compass-dialog','Find your bearings','Compass',965,530], ['trail-dialog','Worth the mud','Boots',565,560]
     ]},
     sea: { image:'ship-deck.svg', title:'The horizon has room.', line:'A small push can start a long question.', alt:'A ship deck at dusk with an open horizon, a paper boat, a compass, a notebook and a porthole.', objects:[
-      ['sea-dialog','Give it a push','Paper boat',600,430], ['sea-dialog','Follow the horizon','Compass',290,470],
+      ['sea-dialog','Give it a push','Paper boat',600,430], ['compass-dialog','Follow the horizon','Compass',290,470],
       ['sea-dialog','A question at sea','Notebook',825,510], ['circuit-dialog','Make a connection','Porthole',970,300]
     ]}
   };

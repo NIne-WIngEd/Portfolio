@@ -219,6 +219,28 @@
   get('[data-circuit-switch]').addEventListener('click', () => { switchClosed = !switchClosed; renderCircuit(); });
   get('[data-circuit-reset]').addEventListener('click', () => { wire = false; switchClosed = false; renderCircuit(); });
 
+  // A compass and a muddy trail give the camp objects their own discoveries.
+  const bearingAngle = get('[data-bearing-angle]');
+  const bearingNames = ['North', 'North-east', 'East', 'South-east', 'South', 'South-west', 'West', 'North-west'];
+  function pointCompass(value) {
+    const angle = Math.max(0, Math.min(359, Number(value)));
+    bearingAngle.value = String(angle);
+    get('[data-bearing-toy]').style.setProperty('--bearing', `${angle}deg`);
+    get('[data-bearing-value]').textContent = `${angle}°`;
+    get('[data-bearing-status]').textContent = `${bearingNames[Math.round(angle / 45) % 8]}. A little room to wander.`;
+  }
+  bearingAngle.addEventListener('input', () => pointCompass(bearingAngle.value));
+  all('button[data-bearing]').forEach(button => button.addEventListener('click', () => pointCompass(button.dataset.bearing)));
+  let trailStep = 0;
+  const trailLines = ['One step outside.', 'A small mark on the path.', 'A little farther.', 'Still a little farther.', 'There’s a trail behind you now.'];
+  function renderTrail() {
+    get('[data-trail]').dataset.trail = String(trailStep);
+    get('[data-trail-status]').textContent = trailLines[trailStep];
+    get('[data-trail-step]').textContent = trailStep === 4 ? 'Walk it again ↺' : 'Take a step ↗';
+  }
+  get('[data-trail-step]').addEventListener('click', () => { trailStep = (trailStep + 1) % 5; renderTrail(); });
+  get('[data-trail-reset]').addEventListener('click', () => { trailStep = 0; renderTrail(); });
+
   renderSky();
   renderPostcard();
   renderCamp();
