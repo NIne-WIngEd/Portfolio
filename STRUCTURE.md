@@ -1,23 +1,14 @@
-# File structure
+# Site structure
 
-```text
-MK_Rayan_SignalSystem_Story_Portfolio_2026/
-├── index.html
-├── work.html
-├── research.html
-├── journey.html
-├── achievements.html
-├── OPEN_PREVIEW_HOMEPAGE.html
-├── HOW_TO_OPEN.md
-├── README.md
-├── STRUCTURE.md
-├── manifest.webmanifest
-├── robots.txt
-├── sitemap.xml
-└── assets/
-    ├── css/styles.css
-    ├── js/data.js
-    ├── js/main.js
-    ├── img/*.svg
-    └── docs/Mostakim_Khan_Rayan_Resume.pdf
-```
+Five routes share a static header, footer, stylesheet and one enhancement script.
+The primary menu links Home, Work, Research, Stories and Recognition. The Stories route
+retains `journey.html` and offers `#bread`, `#mosaic`, `#sea`, `#reservoir`, `#context`
+and `#small-things`. Home links to those stories through an accessible SVG object mosaic.
+
+All primary content is HTML; there is no data rendering dependency. Native details
+provide optional margin notes and project disclosures. A failed or absent script leaves
+navigation visible and every story/project readable. JavaScript exposes initialized
+controls for filtering, mobile navigation, optional motion and the reservoir sketch.
+
+Public personal copy is adapted and curated. Original applications, private diaries,
+and research receipts are kept outside the public repository.
