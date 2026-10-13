@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="night" x1="170" y1="0" x2="920" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#111C30"/><stop offset=".52" stop-color="#20334E"/><stop offset="1" stop-color="#5A5B68"/></linearGradient>
+    <linearGradient id="terrace" x1="600" y1="389" x2="600" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#76808A"/><stop offset="1" stop-color="#454F63"/></linearGradient>
+    <linearGradient id="cushion" x1="728" y1="406" x2="1108" y2="614" gradientUnits="userSpaceOnUse"><stop stop-color="#E5DCC7"/><stop offset="1" stop-color="#B2B5AC"/></linearGradient>
+    <linearGradient id="blanket" x1="873" y1="426" x2="1058" y2="662" gradientUnits="userSpaceOnUse"><stop stop-color="#476DBC"/><stop offset="1" stop-color="#283E70"/></linearGradient>
+    <linearGradient id="metal" x1="213" y1="263" x2="317" y2="359" gradientUnits="userSpaceOnUse"><stop stop-color="#E9E4D6"/><stop offset=".44" stop-color="#93AAA9"/><stop offset="1" stop-color="#4D6B7A"/></linearGradient>
+    <linearGradient id="wood" x1="564" y1="450" x2="729" y2="588" gradientUnits="userSpaceOnUse"><stop stop-color="#CBA87D"/><stop offset="1" stop-color="#9A785C"/></linearGradient>
+    <radialGradient id="horizon" cx="0" cy="0" r="1" gradientTransform="translate(673 368) scale(515 174)" gradientUnits="userSpaceOnUse"><stop stop-color="#DAB17C" stop-opacity=".28"/><stop offset="1" stop-color="#C6A06D" stop-opacity="0"/></radialGradient>
+    <radialGradient id="lantern-light" cx="0" cy="0" r="1" gradientTransform="translate(1083 477) scale(112 93)" gradientUnits="userSpaceOnUse"><stop stop-color="#F5D09A" stop-opacity=".28"/><stop offset="1" stop-color="#F5D09A" stop-opacity="0"/></radialGradient>
+    <pattern id="grain" width="31" height="27" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r=".7" fill="#F0E9D6" opacity=".12"/><circle cx="23" cy="19" r=".6" fill="#142438" opacity=".17"/><path d="M12 24h2M25 5h2" stroke="#F0E9D6" stroke-width=".7" opacity=".08"/></pattern>
+    <pattern id="windows" width="24" height="30" patternUnits="userSpaceOnUse"><path d="M7 7h5v8H7Z" fill="#DDAF74" opacity=".78"/><path d="M17 20h4v6h-4Z" fill="#BA9567" opacity=".4"/></pattern>
+    <pattern id="chess-squares" width="50" height="44" patternUnits="userSpaceOnUse"><path d="M0 0h25v22H0Zm25 22h25v22H25Z" fill="#365681"/></pattern>
+    <pattern id="blanket-weave" width="18" height="20" patternUnits="userSpaceOnUse"><path d="M0 5h18M0 15h18M5 0v20M14 0v20" stroke="#99B5DB" stroke-width=".6" opacity=".28"/></pattern>
+    <filter id="shadow" x="-30%" y="-70%" width="160%" height="240%"><feGaussianBlur stdDeviation="6"/></filter>
+    <symbol id="star" viewBox="0 0 20 20"><path d="m10 1 2.3 6.7L19 10l-6.7 2.3L10 19l-2.3-6.7L1 10l6.7-2.3Z" fill="currentColor"/></symbol>
+    <symbol id="pawn" viewBox="0 0 30 52"><circle cx="15" cy="9" r="7" fill="currentColor"/><path d="M9 18h12l-2 9c0 7 4 11 7 15H4c3-4 7-8 7-15Zm-5 24h22v6H4Z" fill="currentColor" stroke="#263B4D" stroke-width="1.8"/><path d="M9 21h12M7 42h16" stroke="#E7DCC6" stroke-width="1.5" opacity=".4"/></symbol>
+    <symbol id="rook" viewBox="0 0 30 52"><path d="M5 3h5v7h5V3h5v7h5V3h3v14l-6 6-1 17 6 3v5H3v-5l6-3-1-17-6-6V3Z" fill="currentColor" stroke="#263B4D" stroke-width="1.8"/><path d="M6 17h20M9 25h13M6 42h18" stroke="#E7DCC6" stroke-width="1.5" opacity=".5"/></symbol>
+    <symbol id="leaf" viewBox="0 0 30 50"><path d="M16 48C-1 32-3 14 19 1c14 22 16 36-3 47Z" fill="currentColor"/><path d="m16 46 2-33m0 21-9-10m9 3 7-9" stroke="#284747" stroke-width="1.4"/></symbol>
+    <clipPath id="blanket-clip"><path d="M904 433c35-6 68 8 82 25l-2 49c2 40 20 70 6 115l-100-12c14-47-6-88-19-110-9-20 0-51 33-67Z"/></clipPath>
+    <clipPath id="dial-clip"><circle cx="930" cy="200" r="65"/></clipPath>
+  </defs>
+
+  <!-- An imagined late-night terrace, assembled from original vector shapes. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0h1200v720H0Z" fill="url(#night)"/>
+    <path d="M0 0h1200v460H0Z" fill="url(#grain)"/>
+    <ellipse cx="673" cy="368" rx="515" ry="174" fill="url(#horizon)"/>
+    <circle cx="148" cy="83" r="30" fill="#EADFC0"/>
+    <circle cx="160" cy="72" r="30" fill="#152339"/>
+    <circle cx="134" cy="91" r="4" fill="#CABF9F" opacity=".45"/>
+    <circle cx="126" cy="76" r="2" fill="#CABF9F" opacity=".4"/>
+    <g fill="#E9E2C8" opacity=".72">
+      <circle cx="52" cy="65" r="1.3"/><circle cx="81" cy="175" r="1.7"/><circle cx="210" cy="118" r="1.2"/><circle cx="302" cy="54" r="1.3"/><circle cx="362" cy="181" r="1.3"/><circle cx="444" cy="77" r="1.7"/><circle cx="481" cy="151" r="1.1"/><circle cx="562" cy="39" r="1.6"/><circle cx="624" cy="218" r="1.2"/><circle cx="694" cy="88" r="1.2"/><circle cx="722" cy="180" r="1.7"/><circle cx="809" cy="39" r="1.2"/><circle cx="1067" cy="84" r="1.8"/><circle cx="1125" cy="213" r="1.3"/><circle cx="1172" cy="37" r="1.6"/><circle cx="1101" cy="274" r="1.2"/>
+    </g>
+    <g color="#E4DBC0"><use href="#star" x="348" y="91" width="12" height="12"/><use href="#star" x="613" y="117" width="15" height="15"/><use href="#star" x="1018" y="35" width="12" height="12"/><use href="#star" x="777" y="227" width="10" height="10"/></g>
+    <path d="m414 54 48 16 23 41 44-13 32 39" stroke="#B7BDCD" stroke-width="1" opacity=".21"/>
+    <g fill="#CFD4DD"><circle cx="414" cy="54" r="2.2"/><circle cx="462" cy="70" r="2.5"/><circle cx="485" cy="111" r="2"/><circle cx="529" cy="98" r="2.1"/><circle cx="561" cy="137" r="2.5"/></g>
+    <path d="m1054 140 32-14m-32 14 14-4" stroke="#D9D7CC" stroke-width="1.5" opacity=".5"/>
+
+    <!-- City layers and small amber windows sit behind the railing. -->
+    <path d="M0 311h27v-48h45v31h31v-67h38v34h28v-25h40v67h30v-39h44v-31h23v20h35v49h36v-64h44v29h31v-52h50v63h28v-21h38v48h43v-86h44v43h25v-61h38v53h28v-19h39v71h27v-39h48v-48h44v46h25v-26h43v54h36v-84h47v41h32v-28h46v77h31v-64h52v47h31v-79h38v57h25v-10h43v119H0Z" fill="#4C5262" opacity=".8"/>
+    <path d="M0 345h32v-35h65v-74h50v52h38v-7h58v55h28v-91h62v40h30v34h29v-74h48v-11h19v11h30v66h25v-23h71v49h30v-93h60v46h35v-16h48v70h40v-78h71v32h37v-57h70v69h29v-5h69v66h39v-98h68v56h31v-28h55v43h38v-68h55v157H0Z" fill="#303C50"/>
+    <path d="M32 310h65v-74h50v52h38v-7h58v85H32Zm239-65h62v40h30v81h-92Zm121 0h48v-11h19v11h30v121h-97Zm126 42h71v79h-71Zm101-44h60v46h35v77h-95Zm174 11h71v32h37v80H793Zm108-25h70v69h29v68h-99Zm137 39h68v56h31v42h-99Z" fill="url(#windows)" opacity=".72"/>
+    <path d="M0 376v-37h64v37h32v-42h45v-26h22v-26h4v26h20v68h48v-17h50v17h19v-41h52v-29h40v70h39v-29h63v-40h4v40h36v29h39v-18h73v18h34v-39h58v-53h5v53h40v39h43v-22h69v22h33v-64h70v64h54v-36h37v-65h5v65h24v36h38v-27h67v27h42v-72h55v125H0Z" fill="#273546"/>
+    <g fill="#D8AA6C" opacity=".8"><path d="M107 345h10v9h-10Zm18 0h10v9h-10Zm24-10h9v9h-9Zm0 16h9v9h-9Zm-9-36h10v8h-10ZM316 348h10v9h-10Zm18 0h10v9h-10Zm27-26h11v8h-11ZM448 358h10v8h-10Zm17-1h10v8h-10Zm17-1h10v8h-10ZM650 350h10v8h-10Zm17 0h10v8h-10Zm32-36h9v9h-9ZM911 330h9v8h-9Zm16 0h9v8h-9Zm-16 16h9v8h-9Zm16 0h9v8h-9ZM1095 328h10v8h-10Zm17 0h10v8h-10Zm-17 17h10v8h-10Z"/></g>
+    <path d="M0 395 1200 369v351H0Z" fill="url(#terrace)"/>
+    <path d="m0 395 1200-26" stroke="#AAB0A5" stroke-width="2"/>
+    <path d="m0 527 1200-41M0 710l1200-95M260 389 123 720m362-336-20 336m236-341 105 341m125-346 208 346" stroke="#2C3F54" stroke-width="1.7" opacity=".4"/>
+    <path d="m0 531 1200-41m-980 207 64-6m548-150 124-6m36 112 69-5" stroke="#B2B4AC" stroke-width="1.4" opacity=".16"/>
+    <path d="M0 395 1200 369v351H0Z" fill="url(#grain)"/>
+    <g id="roof-railing">
+      <path d="m0 344 1200-18" stroke="#14283A" stroke-width="14"/>
+      <path d="m0 340 1200-18" stroke="#849294" stroke-width="4"/>
+      <path d="m0 413 1200-24" stroke="#24394B" stroke-width="8"/>
+      <path d="m49 343-1 76m98-77-1 75m99-77-1 76m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75m99-77-1 75" stroke="#233749" stroke-width="7"/>
+      <path d="m49 345-1 61m198-64-1 63m198-66-1 63m198-66-1 63m198-66-1 63m198-66-1 63" stroke="#8A9796" stroke-width="1.6" opacity=".6"/>
+      <path d="M41 337v118m601-127v103m497-112v122" stroke="#182B3D" stroke-width="11"/>
+      <path d="M42 340v85m602-94v69m497-78v81" stroke="#8A9796" stroke-width="2" opacity=".55"/>
+    </g>
+    <path d="M9 84c318 66 746 82 1182-21" stroke="#14283A" stroke-width="3"/>
+    <path d="M9 84c318 66 746 82 1182-21" stroke="#91A0A2" stroke-width="1" opacity=".5"/>
+    <g fill="#F5DCAB" stroke="#2D3E4C" stroke-width="2"><path d="M67 98v11"/><ellipse cx="67" cy="116" rx="5" ry="8"/><path d="M199 122v12"/><ellipse cx="199" cy="141" rx="5" ry="8"/><path d="M341 142v11"/><ellipse cx="341" cy="160" rx="5" ry="8"/><path d="M485 153v11"/><ellipse cx="485" cy="171" rx="5" ry="8"/><path d="M631 155v12"/><ellipse cx="631" cy="174" rx="5" ry="8"/><path d="M779 147v12"/><ellipse cx="779" cy="166" rx="5" ry="8"/><path d="M1067 91v11"/><ellipse cx="1067" cy="109" rx="5" ry="8"/></g>
+
+    <!-- Telescope: the pale tube remains legible against the night at 275,300. -->
+    <g id="telescope">
+      <ellipse cx="281" cy="469" rx="83" ry="14" fill="#12273A" opacity=".4" filter="url(#shadow)"/>
+      <path d="m267 361-49 101m53-101 53 97m-51-91 5 116" stroke="#192F43" stroke-width="11"/>
+      <path d="m267 361-49 101m53-101 53 97m-51-91 5 116" stroke="#94AAA9" stroke-width="5"/>
+      <path d="m228 438 49-37 38 34" stroke="#587585" stroke-width="3"/>
+      <path d="m214 462-9 7m119-11 10 7m-56 19 10 1" stroke="#172F43" stroke-width="7"/>
+      <path d="M268 340v29" stroke="#18334A" stroke-width="19"/>
+      <path d="M268 340v27" stroke="#849E9F" stroke-width="10"/>
+      <circle cx="268" cy="357" r="11" fill="#3559A2" stroke="#18334A" stroke-width="3"/>
+      <path d="m246 340 23 13 24-16" stroke="#1E364B" stroke-width="10"/>
+      <path d="m246 340 23 13 24-16" stroke="#9BADAD" stroke-width="5"/>
+      <path d="m198 308 122-55 23 48-123 56Z" fill="url(#metal)" stroke="#19354B" stroke-width="3"/>
+      <path d="m203 310 118-53 7 14-119 53Z" fill="#E5E6D8" opacity=".75"/>
+      <path d="m215 347 121-55" stroke="#46637B" stroke-width="3"/>
+      <path d="m308 258 12-5 23 48-12 6Z" fill="#3C5BA0" stroke="#19354B" stroke-width="2.5"/>
+      <ellipse cx="331" cy="277" rx="12" ry="27" transform="rotate(-25 331 277)" fill="#1C3653" stroke="#19354B" stroke-width="3"/>
+      <ellipse cx="331" cy="277" rx="7" ry="20" transform="rotate(-25 331 277)" fill="#344E74"/>
+      <path d="m327 262 3 14" stroke="#7D9CB4" stroke-width="2"/>
+      <path d="m198 308-19 10 14 29 20-9Z" fill="#567B8E" stroke="#19354B" stroke-width="3"/>
+      <path d="m185 321-17 8 7 14 18-8Z" fill="#253E5C" stroke="#19354B" stroke-width="3"/>
+      <path d="m245 281-8-18 37-16 7 16Z" fill="#BAC9BC" stroke="#19354B" stroke-width="2.5"/>
+      <path d="m239 266 38-17" stroke="#EDE6D1" stroke-width="2"/>
+      <path d="m282 320 22-10" stroke="#355EC0" stroke-width="4"/>
+    </g>
+
+    <!-- A tactile planisphere on its own stand, centered at 930,200. -->
+    <g id="sky-dial">
+      <path d="m930 270-9 93m10-30 34 30m-44-14-24 18" stroke="#1C3347" stroke-width="7"/>
+      <path d="m930 275-8 72" stroke="#9EA99B" stroke-width="2"/>
+      <circle cx="936" cy="207" r="82" fill="#11283E" opacity=".24" transform="translate(5 5)"/>
+      <g transform="rotate(-8 930 200)">
+        <circle cx="930" cy="200" r="82" fill="#AE8C65" stroke="#1B3447" stroke-width="3"/>
+        <circle cx="930" cy="200" r="76" fill="#EEE0BD" stroke="#1B3447" stroke-width="2"/>
+        <circle cx="930" cy="200" r="65" fill="#2A446D" stroke="#334C67" stroke-width="2"/>
+        <g clip-path="url(#dial-clip)">
+          <path d="M876 214c25-53 63-62 116-12M879 219c30 25 76 31 104-2" stroke="#D6D1B7" stroke-width="1.1" opacity=".5"/>
+          <ellipse cx="930" cy="200" rx="55" ry="33" transform="rotate(-35 930 200)" stroke="#82A3C7" stroke-width="1"/>
+          <circle cx="930" cy="200" r="26" stroke="#829EC1" stroke-width="1"/>
+          <path d="m888 181 25 10 9-22 30 12 20-20m-51 52 30 13 13-23 27 9" stroke="#D8D2B8" stroke-width="1.3"/>
+          <g fill="#EEE3C2"><circle cx="888" cy="181" r="2.5"/><circle cx="913" cy="191" r="2"/><circle cx="922" cy="169" r="3"/><circle cx="952" cy="181" r="2.3"/><circle cx="972" cy="161" r="2"/><circle cx="921" cy="213" r="2.3"/><circle cx="951" cy="226" r="2.8"/><circle cx="964" cy="203" r="2"/><circle cx="991" cy="212" r="2.4"/><circle cx="901" cy="232" r="1.3"/><circle cx="954" cy="150" r="1.4"/><circle cx="936" cy="245" r="1.3"/><circle cx="878" cy="205" r="1.5"/></g>
+          <path d="m931 192 3 5 6 3-6 2-3 6-2-6-6-2 6-3Z" fill="#E8C991"/>
+        </g>
+        <path d="M930 125v8m37 2-4 7m31 20-7 4m17 34h-8m-2 37-7-4m-20 32-4-7m-33 17v-8m-37-2 4-7m-31-20 7-4m-17-33h8m2-37 7 4m20-31 4 7" stroke="#5B6770" stroke-width="1.5"/>
+        <circle cx="930" cy="200" r="69" stroke="#B8B59E" stroke-width="1.2"/>
+        <path d="M909 121h40l-2 9-36 1Z" fill="#8A6D4E" stroke="#293C48" stroke-width="1.8"/>
+        <path d="M903 278h51" stroke="#E8D8B2" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- An upholstered roof bench, knit blanket, and a low chess table. -->
+    <ellipse cx="932" cy="646" rx="226" ry="32" fill="#182C42" opacity=".38" filter="url(#shadow)"/>
+    <g id="roof-bench">
+      <path d="M755 515 1106 489l12 130-337 30Z" fill="#806D5C" stroke="#203749" stroke-width="3"/>
+      <path d="m786 637-1 42m290-71 10 47" stroke="#263A49" stroke-width="11"/>
+      <path d="m787 638-1 31m289-56 8 30" stroke="#AF9472" stroke-width="5"/>
+      <path d="M768 424c-1-22 14-31 34-33l263-14c19-1 33 10 34 29l4 107-329 28Z" fill="url(#cushion)" stroke="#263B4B" stroke-width="3"/>
+      <path d="m797 399 6 104m103-108 1 99m100-106 3 98" stroke="#8F9A98" stroke-width="2"/>
+      <path d="M769 421c78-8 215-20 321-17" stroke="#F4E8D0" stroke-width="2.5" opacity=".65"/>
+      <path d="M756 513 1096 488l32 66-342 42Z" fill="#D2D1BE" stroke="#263B4B" stroke-width="3"/>
+      <path d="m786 596 342-42v27l-342 39Z" fill="#A8B4AA" stroke="#263B4B" stroke-width="2.5"/>
+      <path d="m774 519 22 68m92-76 17 61m89-70 18 59" stroke="#95A69F" stroke-width="1.8"/>
+      <path d="m782 591 333-41" stroke="#F1E9D0" stroke-width="2"/>
+      <path d="M737 492c-10-1-19 5-18 15l27 100 47-3-20-106Z" fill="#A19C86" stroke="#263B4B" stroke-width="3"/>
+      <path d="m732 506 28-2 17 83-25 5Z" fill="#D4CAB1"/>
+      <path d="M1091 467c9-9 27-6 30 7l34 100-43 8-31-102Z" fill="#A19C86" stroke="#263B4B" stroke-width="3"/>
+      <path d="m1100 478 12-3 29 88-17 4Z" fill="#DBCEB1"/>
+      <path d="M829 423c-11-6-34-1-45 8-8 17-5 38 9 56 18 6 36 4 52-5 5-20-3-44-16-59Z" fill="#B3765D" stroke="#314555" stroke-width="2.5"/>
+      <path d="M793 437c11-6 22-8 32-5m-28 38 31 1" stroke="#DBAA83" stroke-width="2"/>
+      <path d="M1039 410c-18-8-38-1-51 10-3 22 0 43 15 53 15 3 37 0 51-9 6-18-2-43-15-54Z" fill="#71847D" stroke="#314555" stroke-width="2.5"/>
+      <path d="m1000 424 32-4m-24 36 26-2" stroke="#A7B4A4" stroke-width="2"/>
+      <path d="M904 433c35-6 68 8 82 25l-2 49c2 40 20 70 6 115l-100-12c14-47-6-88-19-110-9-20 0-51 33-67Z" fill="url(#blanket)" stroke="#263B4B" stroke-width="2.5"/>
+      <path d="M904 433c35-6 68 8 82 25l-2 49c2 40 20 70 6 115l-100-12c14-47-6-88-19-110-9-20 0-51 33-67Z" fill="url(#blanket-weave)"/>
+      <g clip-path="url(#blanket-clip)"><path d="M897 436c-4 32 11 47 18 64s16 62 8 119m-9-183c0 32 9 44 22 65 14 26 17 73 7 119m-10-182c2 29 12 40 26 64 14 25 18 71 6 121" stroke="#7F9EC9" stroke-width="2" opacity=".65"/><path d="m886 598 113 10m-115-2 114 10" stroke="#DBD6BD" stroke-width="2" opacity=".7"/></g>
+      <path d="m891 610-4 14m14-12-3 14m14-12-2 15m14-13-1 14m13-13v15m12-13 1 14m11-13 2 14m10-12 3 12m8-12 4 12" stroke="#8CA2C1" stroke-width="2"/>
+    </g>
+
+    <!-- Music player and headphones share an ottoman at 430,520. -->
+    <g id="roof-music">
+      <ellipse cx="420" cy="608" rx="110" ry="19" fill="#12283C" opacity=".34" filter="url(#shadow)"/>
+      <path d="M340 525c35-19 108-22 153-5l2 68c-19 27-112 30-150 8Z" fill="#85795F" stroke="#243A4C" stroke-width="3"/>
+      <ellipse cx="417" cy="524" rx="77" ry="25" fill="#B9A27D" stroke="#243A4C" stroke-width="3"/>
+      <ellipse cx="417" cy="521" rx="64" ry="18" stroke="#D8C8A6" stroke-width="1.5"/>
+      <path d="m352 548 4 42m123-49 2 39" stroke="#6D6657" stroke-width="2"/>
+      <path d="m343 577 149-8" stroke="#C4AF8B" stroke-width="1.5"/>
+      <path d="m391 495 70-3 9 47-71 6Z" fill="#688793" stroke="#19364D" stroke-width="3"/>
+      <path d="m396 500 61-3 7 38-62 6Z" fill="#BDD2CE"/>
+      <path d="m410 506 23-1 3 18-24 2Z" fill="#315AC1" stroke="#2A486B" stroke-width="1.5"/>
+      <path d="m417 511 9 5-8 6Z" fill="#EBE5D0"/>
+      <path d="m445 505 8-1m-7 8 8-1m-7 8 8-1" stroke="#577886" stroke-width="2"/>
+      <circle cx="450" cy="530" r="4" fill="#D6AA75" stroke="#26485E" stroke-width="1.5"/>
+      <path d="m411 533 24-2" stroke="#597B8C" stroke-width="2"/>
+      <path d="M361 511c-10-38 3-70 36-73 34-3 56 24 56 54" stroke="#182E43" stroke-width="14"/>
+      <path d="M361 511c-10-38 3-70 36-73 34-3 56 24 56 54" stroke="#A0ADA3" stroke-width="7"/>
+      <path d="M364 477c0-12 5-24 14-29m47 0c9 5 18 17 20 29" stroke="#CDD0B7" stroke-width="2"/>
+      <rect x="348" y="489" width="25" height="39" rx="11" transform="rotate(-14 360 508)" fill="#344F72" stroke="#182E43" stroke-width="3"/>
+      <rect x="443" y="484" width="24" height="39" rx="10" transform="rotate(13 455 503)" fill="#344F72" stroke="#182E43" stroke-width="3"/>
+      <path d="M357 497v20m96-26 4 20" stroke="#A2B7C0" stroke-width="2"/>
+      <path d="M463 518c24 11 21 39-6 38-28-1-24 21-1 20 13-1 18-9 38-5" stroke="#273F56" stroke-width="2"/>
+    </g>
+
+    <!-- A coffee table and a slow curling steam ribbon at 670,490. -->
+    <g id="roof-coffee">
+      <ellipse cx="658" cy="595" rx="80" ry="17" fill="#172C40" opacity=".3" filter="url(#shadow)"/>
+      <path d="m595 525-5 70m126-77 21 67m-83-43 1 52" stroke="#21384B" stroke-width="8"/>
+      <path d="m595 525-4 61m125-65 16 57" stroke="#B09674" stroke-width="3"/>
+      <path d="M579 505c20-26 124-33 154-9v15c-8 34-132 40-154 9Z" fill="#8F765E" stroke="#21384B" stroke-width="3"/>
+      <ellipse cx="656" cy="501" rx="77" ry="27" transform="rotate(-4 656 501)" fill="url(#wood)" stroke="#21384B" stroke-width="3"/>
+      <path d="M590 501c37-14 102-18 128-5m-110 23 92-6" stroke="#DCBB92" stroke-width="1.6" opacity=".55"/>
+      <ellipse cx="666" cy="511" rx="35" ry="9" fill="#566D72" opacity=".35"/>
+      <ellipse cx="666" cy="509" rx="32" ry="8" fill="#C8C5A9" stroke="#314957" stroke-width="2"/>
+      <path d="M688 475c25-8 31 27 7 28l-6-1" stroke="#273E50" stroke-width="8"/>
+      <path d="M688 475c25-8 31 27 7 28l-6-1" stroke="#DACFAD" stroke-width="4"/>
+      <path d="M641 471c11-9 39-11 50-2l-2 33c-3 13-40 14-45 2Z" fill="#ECE1C3" stroke="#273E50" stroke-width="3"/>
+      <path d="m650 480 1 22" stroke="#FFF3D6" stroke-width="4"/>
+      <path d="m679 483 1 19" stroke="#ADB6A4" stroke-width="2"/>
+      <ellipse cx="666" cy="471" rx="25" ry="8" fill="#77513E" stroke="#273E50" stroke-width="2.5"/>
+      <ellipse cx="665" cy="470" rx="19" ry="4" fill="#A16F4C"/>
+      <path d="M659 454c-10-11 10-17 1-27m13 26c10-11-6-19 2-30" stroke="#E9E1CB" stroke-width="2" opacity=".5"/>
+      <path d="m605 498 17-2m-10 6 22-2" stroke="#756853" stroke-width="2" opacity=".5"/>
+      <path d="M610 495c-5-12 11-18 18-9 5 8-7 17-18 9Z" fill="#B97855" stroke="#504843" stroke-width="1.5"/>
+      <circle cx="617" cy="489" r="1.4" fill="#665144"/><circle cx="624" cy="492" r="1.3" fill="#665144"/>
+    </g>
+
+    <!-- Chess lives on a small separate table, centered at 820,495. -->
+    <g id="roof-chess">
+      <ellipse cx="827" cy="596" rx="95" ry="17" fill="#152A3F" opacity=".34" filter="url(#shadow)"/>
+      <path d="m752 517-20 81m151-93 27 73m-89-28-8 62" stroke="#1E3549" stroke-width="8"/>
+      <path d="m753 521-16 65m145-75 22 61" stroke="#AD987A" stroke-width="3"/>
+      <path d="m727 472 166-17 36 76-171 23Z" fill="#A8906D" stroke="#23394B" stroke-width="3"/>
+      <path d="m758 554 171-23v12l-171 23-31-80v-14Z" fill="#756A5B" stroke="#23394B" stroke-width="2.5"/>
+      <path d="m744 477 137-14 28 60-141 18Z" fill="#DFD0AC" stroke="#23394B" stroke-width="2"/>
+      <g transform="matrix(.69 -.07 .16 .34 744 477)"><path d="M0 0h200v176H0Z" fill="url(#chess-squares)"/><path d="M0 0h200v176H0Zm25 0v176m25-176v176m25-176v176m25-176v176m25-176v176m25-176v176m25-176v176M0 22h200M0 44h200M0 66h200M0 88h200M0 110h200M0 132h200M0 154h200" stroke="#617386" stroke-width=".65"/></g>
+      <ellipse cx="799" cy="493" rx="12" ry="3.5" fill="#1C354F" opacity=".35"/>
+      <ellipse cx="850" cy="514" rx="12" ry="3.5" fill="#1C354F" opacity=".35"/>
+      <use href="#rook" x="775" y="448" width="23" height="40" color="#DBCCA7"/>
+      <use href="#pawn" x="805" y="460" width="21" height="36" color="#E4D4AE"/>
+      <use href="#pawn" x="858" y="470" width="22" height="38" color="#243E5E"/>
+      <use href="#rook" x="831" y="477" width="23" height="40" color="#253D5B"/>
+      <use href="#pawn" x="773" y="482" width="20" height="35" color="#D9C8A2"/>
+      <path d="m765 548 149-20" stroke="#D8C5A2" stroke-width="1.6"/>
+    </g>
+
+    <!-- Plants and a lantern soften the roof without adding private biography. -->
+    <g id="roof-plant">
+      <ellipse cx="110" cy="620" rx="74" ry="15" fill="#182E43" opacity=".28" filter="url(#shadow)"/>
+      <path d="m62 527 87-5-9 86c-15 17-51 16-68-1Z" fill="#A56E55" stroke="#233B4C" stroke-width="3"/>
+      <ellipse cx="105" cy="526" rx="44" ry="12" fill="#C1926E" stroke="#233B4C" stroke-width="3"/>
+      <ellipse cx="105" cy="525" rx="34" ry="7" fill="#3A4F4E"/>
+      <path d="M104 526c-11-42-4-83-11-115m13 108c5-43 29-65 28-95m-28 68c-15-30-35-48-49-60m52 72c11-15 29-26 42-28" stroke="#3A605C" stroke-width="5"/>
+      <g color="#789488"><use href="#leaf" x="74" y="392" width="31" height="51" transform="rotate(-21 90 417)"/><use href="#leaf" x="105" y="419" width="31" height="52" transform="rotate(30 120 445)"/><use href="#leaf" x="30" y="416" width="31" height="50" transform="rotate(-59 45 441)"/><use href="#leaf" x="126" y="452" width="30" height="49" transform="rotate(64 141 476)"/></g>
+      <g color="#4D796D"><use href="#leaf" x="70" y="443" width="32" height="51" transform="rotate(-34 86 469)"/><use href="#leaf" x="99" y="458" width="31" height="49" transform="rotate(38 114 482)"/></g>
+      <path d="m80 545 4 50m47-54-5 53" stroke="#D3A382" stroke-width="2" opacity=".6"/>
+      <path d="M73 604c20 8 42 8 62-1" stroke="#784F42" stroke-width="2"/>
+    </g>
+    <ellipse cx="1083" cy="477" rx="112" ry="93" fill="url(#lantern-light)"/>
+    <g id="roof-lantern">
+      <ellipse cx="1095" cy="633" rx="41" ry="10" fill="#192F42" opacity=".4"/>
+      <path d="m1077 550 31-3 10 75-44 4Z" fill="#DAAD76" fill-opacity=".68" stroke="#21384B" stroke-width="3"/>
+      <path d="m1074 626 44-4 5 7-51 5Z" fill="#8D836A" stroke="#21384B" stroke-width="2"/>
+      <path d="m1073 550 38-3-6-8-26 2Z" fill="#ABB19B" stroke="#21384B" stroke-width="2"/>
+      <path d="M1082 540c-8-22 4-33 14-21 5 5 7 11 7 19" stroke="#21384B" stroke-width="3"/>
+      <path d="m1083 554-2 63m22-64 9 61" stroke="#59695F" stroke-width="3"/>
+      <path d="M1094 574c-8 11-5 20 2 23 9-5 9-13-2-23Z" fill="#FFDEA0"/>
+      <path d="m1089 600 13-1 2 17-15 1Z" fill="#E8CFA0"/>
+    </g>
+    <path d="m190 626 30-3m-15 12 58-6m293 32 37-4m-17 12 58-6M1029 693l50-3" stroke="#A3ABA4" stroke-width="1.5" opacity=".3"/>
+  </g>
+</svg>

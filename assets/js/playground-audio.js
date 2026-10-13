@@ -31,7 +31,7 @@
     volume.min = '0';
     volume.max = '100';
     volume.step = '1';
-    volume.value = '25';
+    volume.value = '40';
     volume.disabled = !AudioContextClass;
   }
   toggle.disabled = !AudioContextClass;
@@ -132,8 +132,11 @@
   }
 
   function chosenVolume() {
-    const value = volume ? Number(volume.value) : 25;
-    return 0.22 * Math.max(0, Math.min(100, Number.isFinite(value) ? value : 25)) / 100;
+    const value = volume ? Number(volume.value) : 40;
+    const fraction = Math.max(0, Math.min(100, Number.isFinite(value) ? value : 40)) / 100;
+    // Calibrated against the complete native render: useful quiet levels, exact mute,
+    // and headroom at maximum. Instrument dynamics remain in the voices above.
+    return 0.9 * Math.pow(fraction, 0.75);
   }
 
   function stopScheduler() {

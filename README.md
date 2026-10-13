@@ -11,16 +11,16 @@ No package installation, external fonts or animation libraries are needed.
 ## Content and routes
 
 - index.html: professional introduction, abstract cobalt contour, current focus and four selected work areas, with a secondary link to the playground.
-- journey.html: an optional illustrated playground. Coffee, a matching game and an unfinished investigation lead the interactions; context, a reservoir model, music, fall and two dramas offer further discoveries. Brief source notes are optional.
+- journey.html: an optional illustrated playground. Five original illustrated places: a desk, late-night rooftop, airport waiting corner, forest camp and ship deck. Coffee, cards and an unfinished investigation sit alongside a knight-hop game, star chart, postcards, paper plane, lantern trail, paper boat and small circuit. Brief source notes are optional.
 - work.html: questions behind current AI, scientific software and GPU projects, with verified milestones.
 - research.html: questions, methods, lab work and publications.
 - achievements.html: recognition and selected context.
 
-Professional content lives in HTML. Navigation, project cases, resume and the playground illustration remain available without JavaScript. The playground requires JavaScript for its toys and provides a short static introduction otherwise. Personal source documents and private journal entries are not included in this repo.
+Professional content lives in HTML. Navigation, project cases, resume and the playground illustration remain available without JavaScript. The playground requires JavaScript for its toys and provides a short introduction and all five illustrations otherwise. Personal source documents and private journal entries are not included in this repo.
 
 ## Enhancement and assets
 
-assets/js/main.js handles shared navigation and project filters. assets/js/home-motion.js handles the home contour and its pause control. assets/js/playground.js handles the personal toys, native dialogs, resets and motion control; assets/css/playground.css is isolated to the personal page. assets/img/after-hours.svg is original vector artwork for a symbolic setting.
+assets/js/main.js handles shared navigation and project filters. assets/js/home-motion.js handles the home contour and its pause control. assets/js/playground.js handles place selection, existing toys, native dialogs, resets and motion control. playground-worlds.js adds the new toys. playground.css and playground-worlds.css are isolated to the personal page. All five scene SVGs use a 1200x720 coordinate system. Rooftop and airport are creative composite settings, not reconstructions of private events.
 
 assets/js/playground-audio.js synthesizes an original instrumental locally with Web Audio: 16 bars at 76 BPM, two passes and an ending. It uses no recordings, samples or lyrics. The user requested a soft instrumental informed by BTS; Pied Piper, Butterfly and Blue & Grey are linked as musical references. Playback starts only from the sound button. Volume is adjustable, and hiding the page suspends playback until another explicit click. No Spotify player, account connection, analytics or remote audio request is made by the site.
 
