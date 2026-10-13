@@ -1,14 +1,14 @@
 {
-  "name": "Mostakim Khan Rayan Portfolio",
-  "short_name": "MKR Portfolio",
+  "name": "Mostakim Khan Rayan",
+  "short_name": "Rayan",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#020508",
-  "theme_color": "#020508",
+  "background_color": "#f5f3ed",
+  "theme_color": "#f5f3ed",
   "icons": [
     {
       "src": "assets/img/favicon.svg",
-      "sizes": "64x64",
+      "sizes": "any",
       "type": "image/svg+xml"
     }
   ]
