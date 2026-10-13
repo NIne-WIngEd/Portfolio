@@ -1,123 +1,205 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 <title>Selected work — Mostakim Khan Rayan</title>
-<meta name="description" content="Rayan builds personal AI, scientific software and GPU systems. Explore Sleight AI, research, open-source contributions and selected work.">
+
+<meta name="description" content="Meet Rayan through stories, questions and small things: an open notebook alongside personal AI, scientific research and GPU work.">
+
 
 <meta name="theme-color" content="#f5f3ed">
+
 <meta property="og:title" content="Selected work — Mostakim Khan Rayan">
-<meta property="og:description" content="Personal AI. Scientific software. Closer to the hardware.">
+
+<meta property="og:description" content="An open notebook: stories, questions, personal AI and the things I return to.">
+
 <meta property="og:image" content="https://nine-winged.github.io/Portfolio/assets/img/og-card.svg">
+
 <meta property="og:url" content="https://nine-winged.github.io/Portfolio/work.html">
+
 <meta property="og:type" content="website">
 
+
 <link rel="canonical" href="https://nine-winged.github.io/Portfolio/work.html">
+
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
 <link rel="manifest" href="manifest.webmanifest">
+
 <link rel="stylesheet" href="assets/css/styles.css">
+
 
 <meta name="google-site-verification" content="7lMuGZhJcq9g-JqPWl0R5jy_7q_wHFFUK9ucJxF-_5k"></head>
 
 <body><a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header"><a class="brand" href="index.html" aria-label="Mostakim Khan Rayan home"><span class="brand-symbol" aria-hidden="true">r.</span><span>Mostakim Khan Rayan</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
-<nav id="navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html" aria-current="page">Work</a><a href="research.html">Research</a><a href="journey.html">About</a><a href="achievements.html">Recognition</a></nav>
+
+<nav id="navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html" aria-current="page">Work</a><a href="research.html">Research</a><a href="journey.html">Stories</a><a href="achievements.html">Recognition</a></nav>
 <a class="header-contact" href="mailto:md.mostakim.khan@vanderbilt.edu">Let’s talk <span aria-hidden="true">↗</span></a></header>
 
+
 <main id="main">
-<section class="page-intro"><p class="eyebrow">01 / Selected work</p><h1>Ideas, tested<br><em>in the real world.</em></h1><p class="page-deck">A few systems I’ve spent time building, debugging and understanding. The work spans personal AI, scientific software and GPU computing.</p></section>
+
+<section class="page-intro"><p class="eyebrow">01 / Selected work</p><h1>Questions I’m<br><em>building through.</em></h1><p class="page-deck">Personal AI, research tools and GPU software. Here are the questions behind the work, the systems I’ve made, and the evidence I have so far.</p></section>
+
 
 <div class="filter-bar" role="group" aria-label="Filter projects"><button type="button" data-filter="all" aria-pressed="true">All work <span>04</span></button><button type="button" data-filter="AI" aria-pressed="false">AI</button><button type="button" data-filter="Research" aria-pressed="false">Research</button><button type="button" data-filter="GPU" aria-pressed="false">GPU</button><span class="filter-count" role="status" aria-live="polite">4 projects</span></div>
+
 <div class="case-list">
+
 <article class="case" id="ai" data-category="AI">
 
+
 <div class="project-art art-ai" aria-hidden="true"><span class="art-index">01</span>
+
 <div class="art-shape"></div>
 <span class="art-caption">memory / model / agency</span></div>
+
 <div class="case-copy"><p class="eyebrow">AI <span class="status">In development</span></p><h2>Sleight AI</h2><p class="case-deck">Personal AI with memory, models and a clear owner.</p>
+
+<aside class="work-question"><span class="eyebrow">The question</span><h3>Who stays in control?</h3><p>I want personal AI to keep useful context while giving its owner a way to inspect and correct it. That makes memory authority and evaluation part of the build, alongside model training.</p></aside>
 <ul class="plain-list">
+
 <li>Built Alice’s memory contracts around source provenance, versioning, owner permissions, correction and deletion.</li>
+
 <li>Trained a 267.5M-parameter conditional decoder for 20 epochs on 36,597 public language pairs, using frozen Gemma features.</li>
+
 <li>Assembled a 278.4M-parameter successor and verified checkpoint reloads. Its new reference and copy heads still need training.</li>
+
 <li>FloRA’s prototype is covered by 1,047 contract tests and 38 core integration cases, including restarts.</li>
 </ul>
 
+
 <details>
+
 <summary>What is established so far <span aria-hidden="true">+</span></summary>
+
 <div class="detail-body"><p>The decoder is a trained component, not a base language model trained from scratch. A three-stage personality candidate also reproduced 60 saved responses and decisions after a checkpoint reload; that checks reproducibility, not held-out personality accuracy.</p><p>Personal fidelity and the full FloRA behavioral comparison remain under evaluation. The larger goal is a personal AI that can keep useful context and act with its owner’s control.</p></div>
 </details>
+
 <div class="link-group"><a class="text-link" href="https://github.com/NIne-WIngEd/Fable_Sleight" target="_blank" rel="noopener noreferrer">Sleight repository<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://github.com/NIne-WIngEd/FloRA" target="_blank" rel="noopener noreferrer">FloRA<span aria-hidden="true"> ↗</span></a></div>
 </div>
     </article>
+
 <article class="case" id="afm" data-category="Research">
 
+
 <div class="project-art art-afm" aria-hidden="true"><span class="art-index">02</span>
+
 <div class="art-shape"></div>
 <span class="art-caption">image → morphology</span></div>
+
 <div class="case-copy"><p class="eyebrow">Research <span class="status">Research software</span></p><h2>AFM Morphology Platform</h2><p class="case-deck">Less manual image analysis. More time to investigate the material.</p>
+
+<aside class="work-question"><span class="eyebrow">The question</span><h3>What can a researcher inspect?</h3><p>Classification is one step in an image-analysis workflow. The platform also needs editable masks, traceable outputs and reports that researchers can use. I worked across those connections.</p></aside>
 <ul class="plain-list">
+
 <li>Connected a Flask API and Next.js interface to classification, segmentation, editable masks, batch morphology analysis and PDF reports.</li>
+
 <li>Reduced analysis turnaround by 65% in the lab workflow.</li>
+
 <li>On a 50-image validation set: 90.0% classification accuracy, 0.845 mean Dice, 0.737 IoU and 6.66 images per minute.</li>
 </ul>
+
 <details>
+
 <summary>Research and reproducibility <span aria-hidden="true">+</span></summary>
+
 <div class="detail-body"><p>First and corresponding author of the platform manuscript. The preprint is public on SSRN, and the SoftwareX submission has a revision invitation.</p><p>The evaluation data and compatible runtime are public. The original training dataset was not preserved, so the release supports evaluation and use rather than a complete retraining claim.</p></div>
 </details>
+
 <div class="link-group"><a class="text-link" href="https://github.com/NIne-WIngEd/PSE" target="_blank" rel="noopener noreferrer">Source code<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://doi.org/10.2139/ssrn.7123011" target="_blank" rel="noopener noreferrer">Read the preprint<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://doi.org/10.5281/zenodo.21422891" target="_blank" rel="noopener noreferrer">Evaluation dataset<span aria-hidden="true"> ↗</span></a></div>
 </div>
     </article>
+
 <article class="case" id="gpu" data-category="GPU">
 
+
 <div class="project-art art-gpu" aria-hidden="true"><span class="art-index">03</span>
+
 <div class="art-shape"></div>
 <span class="art-caption">parallel / collective</span></div>
+
 <div class="case-copy"><p class="eyebrow">GPU <span class="status">Independent contributor</span></p><h2>Open-source GPU computing</h2><p class="case-deck">Small changes where correctness and parallel execution matter.</p>
+
+<aside class="work-question"><span class="eyebrow">The question</span><h3>Where does correctness depend on a small detail?</h3><p>A layout or indexing choice can change a numerical result. My contributions focus on making those details explicit, with the distributed behavior and layout coverage the implementation needs.</p></aside>
 <ul class="plain-list">
+
 <li>Contributed distributed Jacobi to AMD ROCm Iris: Triton halo exchange, global convergence and CI coverage across 2, 4 and 8 ranks on MI350X.</li>
+
 <li>Fixed per-cluster standard-deviation indexing in NVIDIA RAFT, covering float/double data and row/column layouts.</li>
+
 <li>Additional cuML work covers native C++ dataset generation, IVF parameter alignment and GPU multiclass classification; those pull requests are under review.</li>
 </ul>
+
 <details>
+
 <summary>Contribution record <span aria-hidden="true">+</span></summary>
+
 <div class="detail-body"><p>I contribute independently to these projects. Iris #545 and RAFT #3170 are merged. cuML #8482, #8484 and #8495 remain open as of October 2026.</p>
+
 <div class="link-group"><a class="text-link" href="https://github.com/NVIDIA/cuml/pull/8482" target="_blank" rel="noopener noreferrer">cuML #8482<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://github.com/NVIDIA/cuml/pull/8484" target="_blank" rel="noopener noreferrer">cuML #8484<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://github.com/NVIDIA/cuml/pull/8495" target="_blank" rel="noopener noreferrer">cuML #8495<span aria-hidden="true"> ↗</span></a></div>
 </div>
 </details>
+
 <div class="link-group"><a class="text-link" href="https://github.com/ROCm/iris/pull/545" target="_blank" rel="noopener noreferrer">Iris #545 · Merged<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://github.com/NVIDIA/raft/pull/3170" target="_blank" rel="noopener noreferrer">RAFT #3170 · Merged<span aria-hidden="true"> ↗</span></a></div>
 </div>
     </article>
+
 <article class="case" id="md" data-category="Research">
 
+
 <div class="project-art art-md" aria-hidden="true"><span class="art-index">04</span>
+
 <div class="art-shape"></div>
 <span class="art-caption">structure / propagation</span></div>
+
 <div class="case-copy"><p class="eyebrow">Research <span class="status">Ongoing</span></p><h2>Polymer molecular dynamics</h2><p class="case-deck">Following how structure changes the propagation of a shockwave.</p>
+
+<aside class="work-question"><span class="eyebrow">The question</span><h3>What does structure change?</h3><p>The ongoing question is how polymer structure affects shockwave propagation. I use simulation profiles and repeatable HPC workflows to investigate it, rather than treat the simulation itself as the conclusion.</p></aside>
 <ul class="plain-list">
+
 <li>Study shockwave propagation in polyisobutylene with Dr. Sergei Nazarenko’s research group.</li>
+
 <li>Run LAMMPS workloads on HPC infrastructure using Linux, Slurm and Bash.</li>
+
 <li>Build 4 Å, z-resolved profiles across short- and long-chain systems and six PIB blends, with compressed/uncompressed post-processing and restart checks.</li>
 </ul>
 <p class="small-note">Ongoing research · Undergraduate research assistant · May 2026–present</p>
+
 <div class="link-group"></div>
 </div>
     </article>
 </div>
-<section class="small-section">
+
+<section class="small-section" id="earlier">
+
 <div class="section-label"><span>Earlier</span><span>A first practical build</span></div>
+
 <div class="focus-grid"><h2>A little less<br><em>water wasted.</em></h2>
-<div><p class="large-copy">A reservoir controller that stopped overflow in a community building serving 64 families.</p><p>I adapted what I had learned from robotics into a system people could use every day. It remains a useful reference point for why I build.</p></div>
+
+<div><p class="large-copy">A reservoir controller that stopped overflow in a community building serving 64 families.</p><p>The useful part of a robotics competition model found another home. I proposed adapting its water-level control to our building, and the community helped bring it to life. <a class="text-link" href="journey.html#reservoir">Read the community story<span aria-hidden="true"> ↗</span></a></p></div>
 </div>
 </section>
 </main>
+
 <footer class="site-footer">
-<div class="footer-top"><p class="eyebrow">Have something in mind?</p><a class="contact-display" href="mailto:md.mostakim.khan@vanderbilt.edu">Let’s make<br><em>something useful.</em><span aria-hidden="true">↗</span></a></div>
+
+<div class="footer-top"><p class="eyebrow">A good question is welcome.</p><a class="contact-display" href="mailto:md.mostakim.khan@vanderbilt.edu">What have you been<br><em>wondering about?</em><span aria-hidden="true">↗</span></a></div>
+
 <div class="footer-bottom"><span>© 2026 Mostakim Khan Rayan</span>
-<div><a class="text-link" href="https://github.com/NIne-WIngEd" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.linkedin.com/in/mk-rayan/" target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true"> ↗</span></a><a class="text-link" href="mailto:md.mostakim.khan@vanderbilt.edu">Email<span aria-hidden="true"> ↗</span></a></div>
+
+<div><a class="text-link" href="https://github.com/NIne-WIngEd" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.linkedin.com/in/mk-rayan/" target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true"> ↗</span></a><a class="text-link" href="assets/docs/Mostakim_Khan_Rayan_Resume.pdf">Resume<span aria-hidden="true"> ↗</span></a><a class="text-link" href="mailto:md.mostakim.khan@vanderbilt.edu">Email<span aria-hidden="true"> ↗</span></a></div>
 <span>Nashville, TN</span></div>
 </footer>
+
 <script src="assets/js/main.js" defer></script></body>
 </html>
