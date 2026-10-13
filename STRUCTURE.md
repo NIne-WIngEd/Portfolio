@@ -4,7 +4,7 @@ The site keeps five static routes. index.html leads with work; journey.html is t
 
 Shared presentation is in assets/css/styles.css. Home additions are isolated in home-restore.css; personal-page presentation is in playground.css and playground-worlds.css.
 
-Shared menu/filter behavior is in assets/js/main.js. The home contour is isolated in home-motion.js. Place selection and existing personal interactions are isolated in playground.js; the eight new visual toys are in playground-worlds.js, with optional local audio synthesis in playground-audio.js.
+Shared menu/filter behavior is in assets/js/main.js. The home contour is isolated in home-motion.js. Place selection and existing personal interactions are isolated in playground.js; the ten new visual toys are in playground-worlds.js, with optional local audio synthesis in playground-audio.js.
 
 Native dialogs use IDs ending in -dialog and can be reached directly by hash, such as journey.html#water-dialog and journey.html#bread-dialog. Their controls have short discrete states. No game engine, remote content API or backend is used.
 
