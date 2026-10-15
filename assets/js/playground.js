@@ -7,134 +7,134 @@
   const reaction = document.querySelector('[data-scene-reaction]');
   const propStories = {
   "desk-coffee": [
-    "The cup before the rest…",
-    "Before the first sip…",
-    "Morning shifts taught me how to make this. There’s a little craft hiding inside something that looks like an ordinary cup."
+    "Four steps. One early shift…",
+    "The order my hands remember…",
+    "Starbucks training had me making shaken espresso, refreshers, matcha and americanos. This is the brown-sugar oatmilk one: ice, espresso, shake, milk. Some things I learned have a very different kind of lab bench."
   ],
   "desk-cards": [
-    "Just one round. Probably…",
-    "The part after ‘one more’…",
-    "Cards with friends have a way of making a small moment last longer. The game here is different; the excuse to stay is familiar."
+    "Dinner was supposed to be the plan…",
+    "Then someone brought out UNO…",
+    "We cooked khichuri, meat and kheer for Eid, had friends over, and ended up playing UNO until 1:30 a.m. Four matches. I won two. Apparently I kept the statistics as carefully as the memory."
   ],
   "desk-a-question": [
-    "The A wasn’t the ending…",
-    "What happened after the grade…",
-    "An A on a bread experiment left me with another question. I tried a microscope and a microbiology book; the bread went bad before I finished."
+    "The teacher gave it an A. I wasn’t done…",
+    "The answer that went moldy…",
+    "In seventh grade, a bread experiment left me wondering what the instructions hadn’t taught me to see. I went back with a microscope and a microbiology book. The bread went bad before I finished. Hey, I tried, though."
   ],
   "desk-context": [
-    "Good. Until you change one thing…",
-    "How a house became a question…",
-    "A conversation about Hogwarts houses turned into a debate about character. I wanted to know what happened to a ‘good’ quality when the circumstances changed."
+    "Everyone ruled out one house…",
+    "The argument escaped the castle…",
+    "My friends picked every Hogwarts house except Slytherin. I asked whether ambition, calculation and pride were always bad. We started by choosing a house and ended up arguing about what circumstances do to a virtue."
   ],
   "desk-reservoir": [
-    "One wire. Sixty-four families…",
-    "The part beyond the model…",
-    "I adapted a competition model’s water-level control for a building serving 64 families. The community helped turn the little idea into something useful."
+    "The model had an unexpected second life…",
+    "Sixty-four families, one useful piece…",
+    "A water-level controller in my robotics model turned out to be useful beyond the competition. I proposed adapting it for our building’s reservoir. The neighbors helped bring it to life; the part I remember best is that the idea became something we made together."
   ],
   "desk-music": [
-    "There’s something under the quiet…",
-    "What stays after the song…",
-    "BTS and One Direction are part of my story. I like the way music can hold a feeling after the words have run out."
+    "There’s a reason I once dropped the ‘a’…",
+    "A small spelling confession…",
+    "Zayn was my favorite in One Direction. I liked him enough to start spelling my name ‘Rayn’ for a while. Before music became a whole collection of memories, it had already edited my name."
   ],
   "desk-screen": [
-    "The credits weren’t the ending…",
-    "What followed me off-screen…",
-    "Some stories send me back to the beginning. Another nudged me toward keeping a journal; I wanted somewhere for the feeling to go."
+    "I know what happens. Press play anyway…",
+    "The plot isn’t the only reason…",
+    "I used to dismiss dramas. Then my sister’s enthusiasm pulled me in, and now I have favorites I return to. Knowing the ending doesn’t seem to stop me from wanting another episode."
   ],
   "desk-fall": [
-    "Something changes with the leaves…",
-    "The season I keep returning to…",
-    "Fall is my favorite season. Something about it makes me hopeful, even when the calendar says things are winding down."
+    "The calendar calls it an ending…",
+    "I keep reading it as a beginning…",
+    "Fall is my favorite season. The leaves are winding down, but something about it makes me hopeful. I don’t need the year to start over to feel like something might."
   ],
   "rooftop-telescope": [
-    "There’s more past the last light…",
-    "Why this points farther…",
-    "A bread experiment once sent me chasing answers through a microscope and a microbiology book. Change the lens; I still want to look a little farther."
+    "Someone made the sky feel reachable…",
+    "A childhood voice, a bigger horizon…",
+    "I wrote about how Kalpana Chawla stayed with me through childhood. Space was one of the first ways I imagined a life in research and creation. A telescope belongs here for that earlier version of me, still looking up."
   ],
   "rooftop-chess": [
-    "The obvious move isn’t the only one…",
-    "The move I didn’t see…",
-    "Chess and pool both pull me in. I like the pause before a move, when looking a little longer can change what you thought you saw."
+    "It looks like the wrong direction…",
+    "My kind of sport has a pause in it…",
+    "Chess and pool both get my attention. I’m drawn to games where a small adjustment in aim or a longer look can change the result. A knight taking the long way round feels quite at home here."
   ],
   "rooftop-headphones": [
-    "This night has another layer…",
-    "The city, a little quieter…",
-    "Music has meant a lot to me, especially BTS. This rooftop gets its own original melody: a little space for the feeling between notes."
+    "This song knows which year it is…",
+    "The playlist is also a time machine…",
+    "Some songs arrive with dates attached: ‘Cardigan’ takes me to August 2020 and March 2022; NewJeans takes me to 2023. I don’t just remember hearing them. For a moment, I remember how being me felt then."
   ],
   "rooftop-coffee": [
-    "This cup has a morning behind it…",
-    "Where the habit began…",
-    "I learned to make coffee on morning shifts. Here the same small ritual has wandered into an imagined late-night scene."
+    "The kitchen had another experiment…",
+    "An unexpected pair of cooks…",
+    "During COVID, my mother and I started trying a new dish every day. We discovered we were pretty good cooks who usually just didn’t cook. This cup is for the unhurried time around making something together."
   ],
   "rooftop-star-chart": [
-    "Those dots could be something else…",
-    "The pattern after the pattern…",
-    "My learning has never fitted neatly in one box. I like following the connections between science, people and the questions they leave each other."
+    "These stars refuse to pick one side…",
+    "My allegiances need a diagram…",
+    "Real Madrid is my team. I also support Argentina and Messi. Yes, I can hear the objection already. Some of my favorite stars make a deeply inconvenient constellation."
   ],
   "airport-departures": [
-    "The board changed. So did the view…",
-    "The chapter between places…",
-    "Japan and Wisconsin were both student-exchange chapters for me. A different place can quietly rearrange what feels familiar."
+    "We were thirteen. The gate was real…",
+    "Before ‘abroad’ became familiar…",
+    "My friends and I prepared for our exchange trips together. We were thirteen, about to travel to the US, and full of plans for the year ahead. I remember how big the world felt before we had even left."
   ],
   "airport-suitcase": [
-    "Some things don’t fit in here…",
-    "What comes back with you…",
-    "The suitcase is imagined, but those exchanges are part of my life. I brought back more ways of looking at things than any bag could hold."
+    "This time, the bags were coming together…",
+    "A reunion with a stop along the way…",
+    "For a family trip to Turkey, we came from different countries to meet up. There was a stop in Paris for New Year, then a week in Istanbul. I like that an airport can be the beginning of everyone being in the same place again."
   ],
   "airport-postcards": [
-    "Turn it over. There’s another side…",
-    "Two places in my story…",
-    "Japan and Wisconsin each became a chapter away from home. These little drawings are a way to revisit them without pretending a postcard holds the whole story."
+    "I’d seen it drawn. Then I arrived…",
+    "The country on the other side of the screen…",
+    "Before my exchange in Osaka, Japan was a place I mostly knew through anime. Then I got to live there. It’s a strange, lovely shift when a place you’ve imagined starts supplying its own details."
   ],
   "airport-book": [
-    "The margin has another idea…",
-    "The page that kept opening…",
-    "Harry Potter was part of my childhood reading. A discussion about its houses eventually escaped the page and became a much larger question about people."
+    "It started with a birthday present…",
+    "A castle small enough to carry…",
+    "My mother gave me the Harry Potter books for my sixth birthday. They became a large part of my childhood. A book is still a very efficient way to carry a much bigger world into a waiting room."
   ],
   "airport-paper-plane": [
-    "It hasn’t quite left yet…",
-    "A small departure of its own…",
-    "Japan and Wisconsin both made away from home part of my story. This little flight is for the bit in between: wondering what happens when you go."
+    "The page had a character before it had wings…",
+    "I once gave a robot a movie…",
+    "For a robotics project, I wrote a story around a character named Samara and filmed it with friends inside our smart-city model. A story on a page became something we could build and play out together. This paper gets to become something too."
   ],
   "forest-lantern": [
-    "The dark is keeping a few things…",
-    "What the small light brings back…",
-    "I spent three nights in a swamp forest. It was a very different way to meet the world than sitting safely behind a desk."
+    "The light was waiting for someone…",
+    "A staircase that noticed…",
+    "One of my community projects was automatic stair lighting: the lights came on when someone was nearby. A sensor doing a small, considerate job. I like that kind of invention—something you can appreciate without needing its explanation first."
   ],
   "forest-tent": [
-    "There’s a way in. First…",
-    "The room with a much bigger outside…",
-    "Three nights in a swamp forest made for a very different room. The world feels a little larger when you step outside your usual one."
+    "Three nights. A very different room…",
+    "The outside stopped being a backdrop…",
+    "I spent three nights in a swamp forest. A tent makes the boundary between your little room and the rest of the world rather thin. That expedition is one of the chapters I wanted this camp to keep."
   ],
   "forest-compass": [
-    "A straight line won’t tell you everything…",
-    "A direction, then another…",
-    "The forest expedition is part of my story. This compass turns that memory into a small invitation to try a direction you weren’t already facing."
+    "The map was hiding more than a route…",
+    "Learning to read a landscape…",
+    "Earth- and climate-science activities took me into topographic maps, biodiversity mapping and questions about planetary boundaries. I was learning to look at a landscape for more than where I could walk next. Direction is only one thing a map can tell you."
   ],
   "forest-boots": [
-    "These didn’t stay clean for long…",
-    "What the boots bring back…",
-    "I spent three nights in a swamp forest. The footprints here are imagined, but stepping outside my usual surroundings was very real."
+    "The weather had a suggestion. We ignored it…",
+    "Not every wet shoe needs an expedition…",
+    "One night, a friend and I played pickleball in the rain. That was the whole update I added at 9:38 p.m. Sometimes the part of a day worth keeping is just that you went outside and played anyway."
   ],
   "sea-paper-boat": [
-    "A little push. Then what?",
-    "The question that travelled…",
-    "Before high school, I spent fifteen days on a ship with my father. The paper boat is imagined; the long horizon is borrowed from that memory."
+    "Fifteen days, with nowhere to hurry off to…",
+    "The part of the voyage I kept…",
+    "Before high school, I joined my father on a fifteen-day cruise. He’s a sailor, so time together has always mattered to me. We talked about family, life and the future; the horizon had plenty of room for all three."
   ],
   "sea-compass": [
-    "The horizon isn’t a finish line…",
-    "Where looking farther began…",
-    "A fifteen-day cruise with my father gave me a different view of the world. This compass is a small reminder that there can be more than one direction to follow."
+    "I tried to find the one direction…",
+    "It kept turning into another subject…",
+    "During COVID, I went looking for the common root of my interests: computational biology, quantum chemistry, particle physics, geology. Research and creation kept turning up in every direction. I started to recognize the thread without needing all the subjects to stay the same."
   ],
   "sea-notebook": [
-    "One conversation wasn’t finished…",
-    "The page after the voyage…",
-    "On that cruise, a conversation with my father wandered into batteries, automation and energy losses. The voyage ended; there was still plenty to wonder about."
+    "The person on this page took five years to arrive…",
+    "A reply to an earlier me…",
+    "In a personal essay, I spoke back to the diary I’d started five years earlier, as the person we’d once imagined. A thank-you for the courage back then, and a promise to keep going. I wanted that earlier version of me to know I hadn’t given up."
   ],
   "sea-porthole": [
-    "There’s a missing piece behind this…",
-    "What the conversation lit up…",
-    "A discussion at sea with my father led into batteries and automation. This little circuit is an imagined way to keep playing with the question."
+    "It works. Now try explaining why…",
+    "The other side of understanding…",
+    "At Roboment, I went from learning robotics to helping other people troubleshoot their projects. A working circuit was a good start; helping someone understand it was another challenge. This little window is for the moment a connection finally makes sense."
   ]
 };
   const focusTargets = new WeakMap();
@@ -202,7 +202,7 @@
   const coffeeButtons = [...document.querySelectorAll('[data-coffee]')];
   const coffeeStatus = document.querySelector('[data-coffee-status]');
   let coffeeStage = 0;
-  const coffeeLines = ['Start with the ice.', 'Now the espresso.', 'A little shake?', 'Finish with the milk.', 'Learned this on morning shifts.'];
+  const coffeeLines = ['Start with the ice.', 'Now the espresso.', 'A little shake?', 'Finish with the milk.', 'A little something we made.'];
   function renderCoffee() {
     coffeeBench.dataset.coffeeStage = String(coffeeStage);
     coffeeStatus.textContent = coffeeLines[coffeeStage];
