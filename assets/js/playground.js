@@ -5,6 +5,138 @@
   if (!scene || typeof HTMLDialogElement === 'undefined' || !HTMLDialogElement.prototype.showModal) return;
   const dialogs = [...document.querySelectorAll('.play-dialog')];
   const reaction = document.querySelector('[data-scene-reaction]');
+  const propStories = {
+  "desk-coffee": [
+    "The cup before the rest…",
+    "Before the first sip…",
+    "Morning shifts taught me how to make this. There’s a little craft hiding inside something that looks like an ordinary cup."
+  ],
+  "desk-cards": [
+    "Just one round. Probably…",
+    "The part after ‘one more’…",
+    "Cards with friends have a way of making a small moment last longer. The game here is different; the excuse to stay is familiar."
+  ],
+  "desk-a-question": [
+    "The A wasn’t the ending…",
+    "What happened after the grade…",
+    "An A on a bread experiment left me with another question. I tried a microscope and a microbiology book; the bread went bad before I finished."
+  ],
+  "desk-context": [
+    "Good. Until you change one thing…",
+    "How a house became a question…",
+    "A conversation about Hogwarts houses turned into a debate about character. I wanted to know what happened to a ‘good’ quality when the circumstances changed."
+  ],
+  "desk-reservoir": [
+    "One wire. Sixty-four families…",
+    "The part beyond the model…",
+    "I adapted a competition model’s water-level control for a building serving 64 families. The community helped turn the little idea into something useful."
+  ],
+  "desk-music": [
+    "There’s something under the quiet…",
+    "What stays after the song…",
+    "BTS and One Direction are part of my story. I like the way music can hold a feeling after the words have run out."
+  ],
+  "desk-screen": [
+    "The credits weren’t the ending…",
+    "What followed me off-screen…",
+    "Some stories send me back to the beginning. Another nudged me toward keeping a journal; I wanted somewhere for the feeling to go."
+  ],
+  "desk-fall": [
+    "Something changes with the leaves…",
+    "The season I keep returning to…",
+    "Fall is my favorite season. Something about it makes me hopeful, even when the calendar says things are winding down."
+  ],
+  "rooftop-telescope": [
+    "There’s more past the last light…",
+    "Why this points farther…",
+    "A bread experiment once sent me chasing answers through a microscope and a microbiology book. Change the lens; I still want to look a little farther."
+  ],
+  "rooftop-chess": [
+    "The obvious move isn’t the only one…",
+    "The move I didn’t see…",
+    "Chess and pool both pull me in. I like the pause before a move, when looking a little longer can change what you thought you saw."
+  ],
+  "rooftop-headphones": [
+    "This night has another layer…",
+    "The city, a little quieter…",
+    "Music has meant a lot to me, especially BTS. This rooftop gets its own original melody: a little space for the feeling between notes."
+  ],
+  "rooftop-coffee": [
+    "This cup has a morning behind it…",
+    "Where the habit began…",
+    "I learned to make coffee on morning shifts. Here the same small ritual has wandered into an imagined late-night scene."
+  ],
+  "rooftop-star-chart": [
+    "Those dots could be something else…",
+    "The pattern after the pattern…",
+    "My learning has never fitted neatly in one box. I like following the connections between science, people and the questions they leave each other."
+  ],
+  "airport-departures": [
+    "The board changed. So did the view…",
+    "The chapter between places…",
+    "Japan and Wisconsin were both student-exchange chapters for me. A different place can quietly rearrange what feels familiar."
+  ],
+  "airport-suitcase": [
+    "Some things don’t fit in here…",
+    "What comes back with you…",
+    "The suitcase is imagined, but those exchanges are part of my life. I brought back more ways of looking at things than any bag could hold."
+  ],
+  "airport-postcards": [
+    "Turn it over. There’s another side…",
+    "Two places in my story…",
+    "Japan and Wisconsin each became a chapter away from home. These little drawings are a way to revisit them without pretending a postcard holds the whole story."
+  ],
+  "airport-book": [
+    "The margin has another idea…",
+    "The page that kept opening…",
+    "Harry Potter was part of my childhood reading. A discussion about its houses eventually escaped the page and became a much larger question about people."
+  ],
+  "airport-paper-plane": [
+    "It hasn’t quite left yet…",
+    "A small departure of its own…",
+    "Japan and Wisconsin both made away from home part of my story. This little flight is for the bit in between: wondering what happens when you go."
+  ],
+  "forest-lantern": [
+    "The dark is keeping a few things…",
+    "What the small light brings back…",
+    "I spent three nights in a swamp forest. It was a very different way to meet the world than sitting safely behind a desk."
+  ],
+  "forest-tent": [
+    "There’s a way in. First…",
+    "The room with a much bigger outside…",
+    "Three nights in a swamp forest made for a very different room. The world feels a little larger when you step outside your usual one."
+  ],
+  "forest-compass": [
+    "A straight line won’t tell you everything…",
+    "A direction, then another…",
+    "The forest expedition is part of my story. This compass turns that memory into a small invitation to try a direction you weren’t already facing."
+  ],
+  "forest-boots": [
+    "These didn’t stay clean for long…",
+    "What the boots bring back…",
+    "I spent three nights in a swamp forest. The footprints here are imagined, but stepping outside my usual surroundings was very real."
+  ],
+  "sea-paper-boat": [
+    "A little push. Then what?",
+    "The question that travelled…",
+    "Before high school, I spent fifteen days on a ship with my father. The paper boat is imagined; the long horizon is borrowed from that memory."
+  ],
+  "sea-compass": [
+    "The horizon isn’t a finish line…",
+    "Where looking farther began…",
+    "A fifteen-day cruise with my father gave me a different view of the world. This compass is a small reminder that there can be more than one direction to follow."
+  ],
+  "sea-notebook": [
+    "One conversation wasn’t finished…",
+    "The page after the voyage…",
+    "On that cruise, a conversation with my father wandered into batteries, automation and energy losses. The voyage ended; there was still plenty to wonder about."
+  ],
+  "sea-porthole": [
+    "There’s a missing piece behind this…",
+    "What the conversation lit up…",
+    "A discussion at sea with my father led into batteries and automation. This little circuit is an imagined way to keep playing with the question."
+  ]
+};
   const focusTargets = new WeakMap();
   let mismatchTimer = null;
   let flipped = [];
@@ -32,6 +164,17 @@
     const origin = (parentDialog && focusTargets.get(parentDialog)) || invoker || document.querySelector(`[data-open="${id}"]`);
     dialogs.forEach(other => { if (other.open) other.close(); });
     focusTargets.set(dialog, origin);
+    const matching = [...document.querySelectorAll(`[data-open="${id}"][data-prop]`)];
+    const samePlace = matching.find(button => button.dataset.prop.startsWith(`${scene.dataset.place}-`));
+    const fallback = id === 'music-dialog' ? 'desk-music' : (id === 'context-dialog' ? 'desk-context' : null);
+    const propKey = invoker?.dataset.prop || samePlace?.dataset.prop || fallback || matching[0]?.dataset.prop;
+    const story = propStories[propKey];
+    const section = dialog.querySelector('[data-prop-story]');
+    if (story && section) {
+      section.dataset.propStory = propKey;
+      section.querySelector('h3').textContent = story[1];
+      section.querySelector('p').textContent = story[2];
+    }
     dialog.showModal();
     reaction.textContent = 'Make yourself at home.';
   }
@@ -179,21 +322,22 @@
     if (!event.target.closest('button[data-fall]')) return;
     fall = !fall;
     scene.classList.toggle('fall-in', fall);
+    document.querySelector('[data-autumn]').dataset.autumn = String(fall);
     document.querySelectorAll('[data-fall]').forEach(choice => choice.setAttribute('aria-pressed', String(fall)));
     reaction.textContent = fall ? 'Fall is my favorite. I tend to get hopeful in fall.' : 'There’s no particular order.';
   });
 
-  let tangerines = false;
+  let island = false;
   let rewatches = 0;
   const screen = document.querySelector('[data-screen]');
   const showStatus = document.querySelector('[data-show-status]');
   document.querySelector('[data-show-next]').addEventListener('click', () => {
-    tangerines = !tangerines;
+    island = !island;
     rewatches = 0;
-    screen.dataset.screen = tangerines ? 'tangerines' : 'frost';
-    document.querySelector('[data-show-title]').textContent = tangerines ? 'When Life Gives You Tangerines' : 'The First Frost';
-    screen.querySelector('.screen-number').textContent = tangerines ? '02' : '01';
-    showStatus.textContent = tangerines ? 'This one nudged me into starting a journal.' : 'Back to this one. Again.';
+    screen.dataset.screen = island ? 'island' : 'winter';
+    document.querySelector('[data-show-title]').textContent = island ? 'An island that keeps the seasons' : 'A winter with room for warmth';
+    screen.querySelector('.screen-number').textContent = island ? '02' : '01';
+    showStatus.textContent = island ? 'This one left a blank page waiting for me.' : 'Back to this one. Again.';
   });
   document.querySelector('[data-rewatch]').addEventListener('click', () => {
     rewatches++;
@@ -232,7 +376,7 @@
       ['coffee-dialog','Coffee?','Coffee',430,440], ['cards-dialog','One quick round','Cards',700,510],
       ['bread-dialog','Look again','A question',280,340], ['context-dialog','It depends…','Context',830,350],
       ['water-dialog','One small change','Reservoir',1015,445], ['music-dialog','A little music','Music',160,520],
-      ['screen-dialog','One more episode','Screen',935,180], ['fall','Let fall in','Fall',300,150]
+      ['screen-dialog','One more episode','Screen',935,180], ['fall-dialog','Let fall in','Fall',300,150]
     ]},
     rooftop: { image:'rooftop.svg', title:'The city is still awake.', line:'A good night for one more move.', alt:'A late-night rooftop with a telescope, city lights, a chessboard, coffee and headphones.', objects:[
       ['sky-dialog','A little farther','Telescope',275,300], ['chess-dialog','Your move','Chess',820,495],
@@ -277,17 +421,20 @@
       hotspot.className = 'scene-hotspot';
       hotspot.style.left = `${x / 12}%`;
       hotspot.style.top = `${y / 7.2}%`;
-      hotspot.setAttribute('aria-label', `${name}: ${label}`);
+      const propKey = `${key}-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+      const teaser = propStories[propKey][0];
+      hotspot.setAttribute('aria-label', `${name}: ${teaser}`);
       const pin = document.createElement('span'); pin.className = 'hotspot-pin'; pin.textContent = id === 'bread-dialog' ? '?' : '+'; pin.setAttribute('aria-hidden', 'true');
-      const caption = document.createElement('span'); caption.className = 'hotspot-label'; caption.textContent = label;
+      const caption = document.createElement('span'); caption.className = 'hotspot-label'; caption.textContent = teaser;
       hotspot.append(pin, caption);
       const choice = document.createElement('button'); choice.type = 'button'; choice.textContent = name;
       [hotspot, choice].forEach(button => {
-        if (id === 'fall') { button.dataset.fall = ''; button.setAttribute('aria-pressed', String(fall)); }
-        else button.dataset.open = id;
+        button.dataset.open = id;
+        button.dataset.prop = propKey;
       });
       hotspots.append(hotspot); objectMenu.append(choice);
     });
+    document.dispatchEvent(new CustomEvent('playground:place', { detail:{ place:key } }));
   }
   placeButtons.forEach(button => button.addEventListener('click', () => setPlace(button.dataset.place)));
   document.querySelector('.place-picker').hidden = false;
