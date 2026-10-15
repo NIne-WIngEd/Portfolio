@@ -1,5 +1,5 @@
 /* An original, optional instrumental. All sound is synthesized locally.
- * Sixteen bars at 76 BPM, played twice with a quieter final cadence.
+ * Five scene-specific scores, played twice with a quieter final cadence.
  * No recordings, samples, lyrics, or quoted melodies are used. */
 (() => {
   'use strict';
@@ -10,10 +10,30 @@
   if (!toggle) return;
 
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  const beat = 60 / 76;
+  const soundscapes = {
+    desk: { title:'Before the rest of the day', description:'Warm keys, a small pulse, room to think.', bpm:76, beats:4, tone:{ filter:6800, wet:.21, keys:1, pad:1, bass:1, pluck:1 } },
+    rooftop: { title:'The last lit window', description:'Slow minor chords, distant keys, a little space between stars.', bpm:66, beats:4, tone:{ filter:4900, wet:.29, keys:.95, pad:1.15, bass:.85, pluck:.8 },
+      harmony:[[40,[55,59,62,66]],[36,[52,55,59,62]],[43,[54,57,59,62]],[38,[54,57,62,64]],[45,[55,59,60,64]],[35,[54,57,59,64]],[40,[55,59,62,66]],[40,[55,59,61,66]]],
+      phrases:[[[.5,74,1],[2.5,71,.9]],[[1,67,1.4],[3,69,.7]],[[.75,71,1.2],[2.75,69,.7]],[[.5,66,1.5]],[[1,72,1],[2.5,71,.8]],[[.5,69,.8],[2,66,1.3]],[[.75,67,1],[2.5,71,.9]],[[1,66,.9],[2.5,64,1.5]]] },
+    airport: { title:'Somewhere between gates', description:'Bright plucks, a light pulse, something about to leave.', bpm:88, beats:4, tone:{ filter:7100, wet:.16, keys:.85, pad:.8, bass:.9, pluck:1 },
+      harmony:[[45,[57,61,64,71]],[42,[57,61,64,68]],[38,[54,57,61,64]],[40,[56,59,64,66]],[37,[52,56,59,61]],[35,[54,57,61,64]],[40,[56,59,61,66]],[45,[57,59,61,64]]],
+      phrases:[[[0,69,.4],[.75,73,.4],[1.5,76,.7],[3,71,.5]],[[.25,73,.5],[1.25,76,.5],[2.5,80,.7]],[[.5,78,.7],[1.5,76,.4],[2.25,73,.5],[3.25,69,.4]],[[0,71,.6],[1.5,76,.5],[2.75,78,.6]],[[.25,76,.5],[1.25,73,.6],[2.75,71,.7]],[[0,74,.5],[1,73,.4],[2.25,69,.8]],[[.5,68,.5],[1.5,71,.5],[2.5,76,.7]],[[.25,73,.7],[1.75,71,.6],[3,69,.9]]] },
+    forest: { title:'A small circle of light', description:'Open fifths, soft wooden plucks, and long quiet spaces.', bpm:60, beats:4, tone:{ filter:4300, wet:.25, keys:.75, pad:1.05, bass:.85, pluck:.85 },
+      harmony:[[45,[57,60,64,67]],[41,[53,57,60,64]],[36,[52,55,57,60]],[38,[50,55,57,62]],[45,[52,57,60,64]],[43,[55,57,62,67]],[41,[53,57,60,64]],[45,[55,57,60,64]]],
+      phrases:[[[1,69,1.7]],[[.5,72,1],[2.5,69,1]],[[1.5,67,1.5]],[[.5,69,.8],[2,74,1.5]],[[1,76,1],[2.5,72,.9]],[[.5,74,1.6]],[[1,72,.9],[2.5,67,1]],[[1,69,2.1]]] },
+    sea: { title:'Past the edge of the page', description:'A swaying three-beat piano, rounded bass and a long horizon.', bpm:70, beats:3, tone:{ filter:5600, wet:.25, keys:1, pad:1, bass:.95, pluck:.8 },
+      harmony:[[36,[52,57,62,67]],[41,[53,57,60,67]],[38,[53,57,60,64]],[43,[55,59,62,69]],[45,[55,60,64,69]],[40,[55,59,62,67]],[41,[53,57,60,67]],[36,[52,55,57,62]]],
+      phrases:[[[.5,67,.8],[1.75,72,.9]],[[.25,76,1],[1.75,74,.7]],[[.5,72,.6],[1.5,69,1]],[[.25,71,.7],[1.5,74,1]],[[.5,76,.8],[1.75,72,.7]],[[.25,71,.6],[1.5,67,1]],[[.5,69,.8],[1.75,67,.7]],[[.5,64,.8],[1.75,60,1.2]]] }
+  };
+  const initialPlace = document.querySelector('[data-scene]')?.dataset.place;
+  let currentPlace = soundscapes[initialPlace] ? initialPlace : 'desk';
+  let profile = soundscapes[currentPlace];
+  let beat = 60 / profile.bpm;
   const passes = 2;
-  const score = compose();
-  const endBeat = 16 * 4 * passes;
+  let score = currentPlace === 'desk' ? composeDesk() : composeScene(profile);
+  let endBeat = 16 * profile.beats * passes;
+  let pendingPlace = null;
+  const retiringGraphs = new Map();
   const lookAhead = 0.24;
   let context = null;
   let instrument = null;
@@ -36,11 +56,11 @@
   }
   toggle.disabled = !AudioContextClass;
   toggle.hidden = false;
-  if (status) status.textContent = AudioContextClass ? 'An original little instrumental' : 'Sound is unavailable in this browser';
+  if (status) status.textContent = AudioContextClass ? soundscapeHint() : 'Sound is unavailable in this browser';
   if (!AudioContextClass) return;
 
   // The harmony and four answering phrases are a composed score, not random notes.
-  function compose() {
+  function composeDesk() {
     const harmony = [
       { bass: 38, chord: [54, 57, 61, 64] }, // Dmaj9
       { bass: 37, chord: [52, 57, 59, 64] }, // Aadd9 / C#
@@ -123,6 +143,84 @@
     return events.sort((a, b) => a.at - b.at);
   }
 
+  function composeScene(theme) {
+    const events = [];
+    const add = (kind, at, note, length, velocity, pan=0) => events.push({kind,at,note,length,velocity,pan});
+    for (let pass=0; pass<passes; pass++) {
+      for (let bar=0; bar<16; bar++) {
+        const [bass,chord] = theme.harmony[bar % 8];
+        const at = (pass*16+bar)*theme.beats;
+        const shade = bar>=14 ? .72 : 1;
+        chord.forEach((note,voice) => {
+          add('pad',at,note,theme.beats,.48*shade,(voice-1.5)*.26);
+          if (currentPlace !== 'forest' || voice%2===0) add('keys',at+voice*.045,note,theme.beats*.65,.68*shade,(voice-1.5)*.16);
+        });
+        add('bass',at,bass,theme.beats*.88,.7*shade);
+        theme.phrases[bar % 8].forEach(([offset,note,length],i) => {
+          add(currentPlace==='sea' ? 'keys':'pluck',at+offset,note,length,(i===0?.76:.62)*shade,i%2?.16:-.12);
+        });
+        if (currentPlace==='airport' && bar<14) {
+          [1,2,3].forEach((offset,i) => add('keys',at+offset,chord[(i+bar)%chord.length]+12,.5,.24,(i-1)*.2));
+          if(bar>1) { add('pulse',at,0,.3,.42); add('brush',at+1.5,0,.12,.23,-.2); add('brush',at+3.5,0,.12,.18,.2); }
+        }
+        if (currentPlace==='sea' && bar<14) [1,2].forEach((offset,i) => add('keys',at+offset,chord[i+1],.6,.32,i?.2:-.2));
+        if (currentPlace==='rooftop' && pass===1 && bar%4===2) add('keys',at+3,chord[3]+12,.9,.19,.3);
+      }
+    }
+    return events.sort((a,b)=>a.at-b.at);
+  }
+
+  function soundscapeHint() { return `Original instrumental · ${profile.title}`; }
+  function showSoundscape() {
+    toggle.dataset.soundscape = currentPlace;
+    const title = document.querySelector('[data-track-name]');
+    const description = document.querySelector('[data-track-description]');
+    if (title) title.textContent = profile.title;
+    if (description) description.textContent = profile.description;
+  }
+  function clearRetiringGraphs() {
+    retiringGraphs.forEach((timer,graph) => { window.clearTimeout(timer); graph.dispose(); });
+    retiringGraphs.clear();
+  }
+  function retire(graph) {
+    graph.level(0,.12);
+    graph.stop(context.currentTime+.14);
+    const timer = window.setTimeout(() => { graph.dispose(); retiringGraphs.delete(graph); },200);
+    retiringGraphs.set(graph,timer);
+  }
+  function changeSoundscape(place) {
+    if (!soundscapes[place]) return;
+    if (busy) { pendingPlace=place; return; }
+    if (place===currentPlace) { pendingPlace=null; return; }
+    const wasPlaying=playing;
+    const wasPaused=toggle.dataset.audioState==='suspended';
+    stopScheduler();
+    if (context && instrument) retire(instrument);
+    currentPlace=place; profile=soundscapes[place]; beat=60/profile.bpm;
+    score=place==='desk'?composeDesk():composeScene(profile);
+    endBeat=16*profile.beats*passes;
+    timeline=null;
+    showSoundscape();
+    instrument=context && context.state!=='closed' ? createInstruments(context) : null;
+    playing=Boolean(wasPlaying && context?.state==='running' && !document.hidden);
+    if (playing) {
+      // The old voices finish before this score begins. Reuse the unlocked context.
+      timeline={start:context.currentTime+.18,cursor:0,ending:false};
+      instrument.level(chosenVolume(),.35);
+      setState('running',`Playing · ${profile.title}`);
+      tick(); scheduler=window.setInterval(tick,70);
+    } else {
+      if (context?.state==='running') void context.suspend().catch(disableAudio);
+      setState(wasPaused?'suspended':'off',unavailable?'Sound is unavailable in this browser':(wasPaused?'Paused · tap Sound on to continue':soundscapeHint()));
+    }
+    pendingPlace=null;
+  }
+  function settlePlace() {
+    if (pendingPlace && !busy && !disposed) changeSoundscape(pendingPlace);
+  }
+  document.addEventListener('playground:place',event => changeSoundscape(event.detail?.place));
+  showSoundscape();
+
   function setState(state, message) {
     toggle.dataset.audioState = state;
     const on = state === 'running';
@@ -204,7 +302,7 @@
       if (!timeline) timeline = { start: context.currentTime + 0.09, cursor: 0, ending: false };
       playing = true;
       instrument.level(timeline.ending ? 0 : chosenVolume(), 0.35);
-      setState('running', 'Playing an original little instrumental');
+      setState('running', `Playing · ${profile.title}`);
       stopScheduler();
       tick();
       if (playing) scheduler = window.setInterval(tick, 70);
@@ -213,10 +311,11 @@
     } finally {
       busy = false;
       toggle.disabled = unavailable || disposed;
+      settlePlace();
     }
   }
 
-  async function turnOff(message = 'An original little instrumental') {
+  async function turnOff(message = soundscapeHint()) {
     if (busy || !context || disposed) return;
     busy = true;
     toggle.disabled = true;
@@ -234,6 +333,7 @@
         // A fresh graph on the next click avoids replaying a previous room/echo tail.
         const stoppedContext = context;
         instrument.dispose();
+        clearRetiringGraphs();
         await stoppedContext.close();
         if (context === stoppedContext) {
           context = null;
@@ -245,6 +345,7 @@
     } finally {
       busy = false;
       toggle.disabled = unavailable || disposed;
+      settlePlace();
     }
   }
 
@@ -266,6 +367,7 @@
     timeline = null;
     stopScheduler();
     if (instrument) instrument.dispose();
+    clearRetiringGraphs();
     if (context && context.state !== 'closed') void context.close().catch(() => {});
     setState('off', 'Sound is unavailable in this browser');
     toggle.disabled = true;
@@ -285,10 +387,12 @@
     timeline = null;
     stopScheduler();
     if (instrument) instrument.dispose();
+    clearRetiringGraphs();
     if (context && context.state !== 'closed') void context.close().catch(() => {});
     context = null;
     instrument = null;
     disposed = true;
+    pendingPlace = null;
     setState('off');
   });
   window.addEventListener('pageshow', event => {
@@ -297,11 +401,12 @@
       disposed = false;
       busy = false;
       toggle.disabled = unavailable;
-      setState('off', 'An original little instrumental');
+      setState('off', soundscapeHint());
     }
   });
 
   function createInstruments(ctx) {
+    const tone = profile.tone;
     const connections = [];
     const sources = new Set();
     const sum = ctx.createGain();
@@ -317,14 +422,14 @@
     const send = ctx.createGain();
     connections.push(sum, lowpass, compressor, master, reverb, wet, delay, echoFilter, feedback, echo, send);
     lowpass.type = 'lowpass';
-    lowpass.frequency.value = 6800;
+    lowpass.frequency.value = tone.filter;
     compressor.threshold.value = -15;
     compressor.knee.value = 12;
     compressor.ratio.value = 5;
     compressor.attack.value = 0.012;
     compressor.release.value = 0.24;
     master.gain.value = 0;
-    wet.gain.value = 0.21;
+    wet.gain.value = tone.wet;
     delay.delayTime.value = beat * 0.75;
     echoFilter.type = 'lowpass';
     echoFilter.frequency.value = 1750;
@@ -391,7 +496,7 @@
       const frequency = 440 * 2 ** ((event.note - 69) / 12);
       const length = event.length * secondsPerBeat;
       const kind = event.kind;
-      const amplitude = event.velocity * (kind === 'pad' ? 0.062 : kind === 'bass' ? 0.22 : kind === 'keys' ? 0.16 : 0.11);
+      const amplitude = event.velocity * (kind === 'pad' ? 0.062 : kind === 'bass' ? 0.22 : kind === 'keys' ? 0.16 : 0.11) * tone[kind];
       const attack = kind === 'pad' ? 0.38 : kind === 'bass' ? 0.018 : 0.012;
       const voice = route(at, length, attack, amplitude, event.pan, kind);
       const layers = kind === 'keys'
